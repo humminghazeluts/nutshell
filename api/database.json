@@ -1,0 +1,58 @@
+{
+    "users" : [
+        {
+            "id" : 1,
+            "username" : "LittleKidLover",
+            "emailAddress" : "michaelscott@gmail.com",
+            "password" : "1234"
+
+        },
+        {
+            "id" : 2,
+            "username" : "Gary",
+            "emailAddress" : "gary@gmail.com",
+            "password" : "4321"
+
+        }
+
+    ], 
+    "articles" : [
+        {
+            "id": 1,
+            "userId": 1,
+            "synopsis": "This is what the story was about",
+            "url": "www.google.com"
+        },
+        {
+            "id": 2,
+            "userId": 2,
+            "synopsis": "Kewl",
+            "url": "www.yahoo.com"
+        }
+    ],
+    "events" : [
+        {
+            "id": 1,
+            "userId": 1,
+            "dateOfEvent" : "2-20-2019",
+            "locationOfEvent" : "NSS"
+        }
+    ],
+    "tasks" : [
+        {
+            "id": 1,
+            "userId": 1,
+            "taskName": "Put laudry away",
+            "expectedCompletionDate": "2-21-2019",
+            "completed": false
+        }
+    ],
+    "friendShips" : [
+        {
+            "id": 1,
+            "friend_1Id" : 1,
+            "friend_2Id" : 2
+        }
+    ]
+
+}
