@@ -21,13 +21,15 @@
             "id": 1,
             "userId": 1,
             "synopsis": "This is what the story was about",
-            "url": "www.google.com"
+            "url": "www.google.com",
+            "currentTimeStamp": 1550158039686
         },
         {
             "id": 2,
             "userId": 2,
             "synopsis": "Kewl",
-            "url": "www.yahoo.com"
+            "url": "www.yahoo.com",
+            "currentTimeStamp": 1550158039686
         }
     ],
     "events" : [
