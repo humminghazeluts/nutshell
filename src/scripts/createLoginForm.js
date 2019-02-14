@@ -1,4 +1,4 @@
-
+//add comment
 const createLoginForm = () => {
     document.querySelector("#loginFormContainer").innerHTML = `
         <h1>Login</h1>
