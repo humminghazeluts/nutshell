@@ -14,3 +14,5 @@ let newCustomerObject = () => {
     } 
     
 }
+
+export default newCustomerObject
