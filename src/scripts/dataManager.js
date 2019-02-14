@@ -28,4 +28,4 @@ editUser: (userId, userObj) => {
     },
 }
 
- export default APIManager
+export default APIManager

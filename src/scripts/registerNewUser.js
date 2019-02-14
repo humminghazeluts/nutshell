@@ -1,6 +1,6 @@
 import APIManager from "./dataManager"
 
-let newCustomerObject = () => {
+let addNewUser = () => {
 
     let newUser = {}
     let userName = document.querySelector("#userName").value
@@ -15,4 +15,4 @@ let newCustomerObject = () => {
     
 }
 
-export default newCustomerObject
+export default addNewUser

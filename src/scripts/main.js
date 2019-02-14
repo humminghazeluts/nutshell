@@ -1,10 +1,14 @@
 import createRegistrationForm from "./createRegistrationForm"
-import newCustomerObject from "./registerNewUser"
+import addNewUser from "./registerNewUser"
 
 
 console.log("hi")
 createRegistrationForm()
-import createLoginForm from "./createLoginForm"
 
-createLoginForm()
+document.querySelector("#registerUser").addEventListener("click", event => {
+    addNewUser()
+})
 
+// import createLoginForm from "./createLoginForm"
+
+// createLoginForm()
