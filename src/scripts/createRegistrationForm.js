@@ -16,8 +16,8 @@ let createRegistrationForm = (location) => {
     <input type="password" name="userPassword" id="userPassword">
 </fieldset>
 
-<button id="createCustomerObject" class="btn btn-info people">
-    Add Customer
+<button id="registerNewCustomer">
+    Register!
 </button>
 </form>
 `
