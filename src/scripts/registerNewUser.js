@@ -1,4 +1,4 @@
-
+import APIManager from "./dataManager"
 
 let newCustomerObject = () => {
     
