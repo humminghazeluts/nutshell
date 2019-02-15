@@ -1,7 +1,7 @@
 /*
     Author: Abbey
     Name: createLoginForm.js
-    Purpose: creates the HTML for the login form and the listening event associated
+    Purpose: creates the HTML for the login form and the listening event to verify correct username and password was entered
 */
 
 import APIManager from "./dataManager"
@@ -23,10 +23,11 @@ const createLoginForm = () => {
                 .then(users => {
                     users.forEach(user => {
                         console.log(user)
-                        if (user.username === username) {
+                        if (user.username === username && user.password === password)  {
                             console.log("logged in")
                             sessionStorage.setItem(user.username, user.password)
-
+                        } else {
+                            alert("Please enter valid username and password")
                         }
                     })
                 })
