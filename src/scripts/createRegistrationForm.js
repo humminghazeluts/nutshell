@@ -22,6 +22,10 @@ Register!
     </div>
 `
 location.innerHTML = contactFormHTML
+document.querySelector("#registerUser").addEventListener("click", event => {
+    addNewUser()
+    console.log("New user added!")
+})
 }
 
 export default createRegistrationForm
