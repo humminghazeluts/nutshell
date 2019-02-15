@@ -1,7 +1,8 @@
-import createRegistrationForm from "./createRegistrationForm"
 
-console.log("hi")
-createRegistrationForm()
-import createLoginForm from "./createLoginForm"
+import {createLandingPage, changePage} from "./createLandingPage"
 
-createLoginForm()
+
+createLandingPage()
+changePage.listenForEvent()
+
+
