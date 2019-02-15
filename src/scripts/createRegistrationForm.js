@@ -19,7 +19,7 @@ let createRegistrationForm = (location) => {
 <button id="registerUser">
 Register!
 </button>
-    </form>
+    </div>
 `
 location.innerHTML = contactFormHTML
 }
