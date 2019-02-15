@@ -19,7 +19,7 @@ const createLoginForm = () => {
             const username = document.getElementById("username").value
             const password = document.getElementById("password").value
 
-            APIManager.getUsers() //should this be where it takes the argument?
+            APIManager.getUsers() 
                 .then(users => {
                     users.forEach(user => {
                         console.log(user)
