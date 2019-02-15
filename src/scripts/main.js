@@ -1,14 +1,8 @@
-// import createRegistrationForm from "./createRegistrationForm"
-alert(TEST)
-import logOutButtonFunction from "./logout"
-// import sessionStorageDelete from "./logout"
+alert("Help")
+import {createLandingPage, changePage} from "./createLandingPage"
 
 
+createLandingPage()
+changePage.listenForEvent()
 
 
-createRegistrationForm()
-import createLoginForm from "./createLoginForm"
-
-sessionStorageDelete()
-createLoginForm()
-logOutButtonFunction()
