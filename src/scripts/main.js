@@ -1,5 +1,6 @@
 import createRegistrationForm from "./createRegistrationForm"
 import addNewUser from "./registerNewUser"
+import APIManager from "./dataManager"
 
 
 console.log("hi")

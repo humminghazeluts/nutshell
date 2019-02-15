@@ -2,7 +2,7 @@
 let createRegistrationForm = (location) => {
     location = document.querySelector(".output")
     let contactFormHTML = `
-<form>
+<div>
 <fieldset>
     <label for="userName">User Name</label>
     <input type="text" name="userName" id="userName">
@@ -17,9 +17,9 @@ let createRegistrationForm = (location) => {
 </fieldset>
 
 <button id="registerUser">
-    Register!
+Register!
 </button>
-</form>
+    </form>
 `
 location.innerHTML = contactFormHTML
 }
