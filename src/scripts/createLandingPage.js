@@ -1,11 +1,10 @@
-import createLoginForm from "./createLoginForm"
 /*
     Author: Abbey
     Name: createLandingPage.js
     Purpose: landing page that allows the user to choose between registering as a new member or logging in
 */
 
-
+import createLoginForm from "./createLoginForm"
 import createRegistrationForm from "./createRegistrationForm"
 
 const createLandingPage = () => {

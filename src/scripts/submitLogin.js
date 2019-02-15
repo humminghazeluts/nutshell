@@ -6,17 +6,12 @@
 */
 
 
-
-const submitLoginInfo = () => {
-    document.querySelector("#loginButton").addEventListener("click", () => {
-        const username = document.getElementById("username").value
-        const password = document.getElementById("password").value
-
-        APIManager.getUsers() //should this be where it takes the argument?
-        //.then(somehow get the user by the username or password or both)
+        // (somehow get the user by the username or password or both)
         //is this an if else 
         //if (users.username or users.password === pull that users information up)//also, will we be putting the session storage inside this event listener
         //else (alert box that reads 'not a valid user, please register. should register button reappear??)
-    })
-}
-
+// // .then(products => {
+//     products.forEach(product => {
+//         const html = productHTML.createProductListHTML(product)
+//         printToDom(html)
+//         getReviewForProduct(product.id)

@@ -1,8 +1,10 @@
 /*
     Author: Abbey
     Name: createLoginForm.js
-    Purpose: creates the HTML for the login form
+    Purpose: creates the HTML for the login form and the listening event associated
 */
+
+import APIManager from "./dataManager"
 
 const createLoginForm = () => {
     document.querySelector(".output").innerHTML = `
@@ -13,6 +15,23 @@ const createLoginForm = () => {
         <input type="password" id="password" name="password">
         <button id="loginButton">Submit</button>
     `
-}
+        document.querySelector("#loginButton").addEventListener("click", () => {
+            const username = document.getElementById("username").value
+            const password = document.getElementById("password").value
 
-export default createLoginForm
+            APIManager.getUsers() //should this be where it takes the argument?
+                .then(users => {
+                    users.forEach(user => {
+                        console.log(user)
+                        if (user.username === username) {
+                            console.log("logged in")
+                            sessionStorage.setItem(user.username, user.password)
+
+                        }
+                    })
+                })
+        })
+    }
+
+
+export default createLoginForm  
