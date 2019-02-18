@@ -39,7 +39,7 @@ let id = sessionStorage.getItem("userId")
 alert(id)
 
 
-logOutButton()
-sessionStorageDelete()
-addTask()
-createTask()
+// logOutButton()
+// sessionStorageDelete()
+// addTask()
+// createTask()
