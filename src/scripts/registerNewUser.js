@@ -14,14 +14,6 @@ let addNewUser = () => {
             alert("Please fill in all information")
         } else {
             allFilledIn = true
-            // newUser.username = userName
-            // newUser.emailAddress = userEmail
-            // newUser.password = userPassword
-             
-            // document.querySelector("#userName").value = ""
-            // document.querySelector("#userEmail").value = ""
-            // document.querySelector("#userPassword").value = ""
-            // return newUser
         }
         for (let i = 0; i < userArray.length; i++) {
             let theUserName = userArray[i].username;
@@ -45,21 +37,7 @@ let addNewUser = () => {
                 uniqueEmail = true
             }
         }
-        // userArray.forEach(user => {
-        //     if (theUserName === userName) {
-        //         alert("Please use a different usernsame")
-        //         uniqueUserName === false
-        //     } else {
-        //         uniqueUserName = true
-        //     } 
-        //     if (theEmail === userEmail) {
-        //         alert("Please use a different email address")
-        //         uniqueEmail === false
-        //     } else {
-        //         uniqueEmail = true
-        //     }
-        //     // console.log(allFilledIn, uniqueEmail, uniqueUserName)
-        // }); 
+
         console.log(allFilledIn, uniqueEmail, uniqueUserName)
         if (allFilledIn === true && uniqueUserName === true && uniqueEmail === true) {
             newUser.username = userName
@@ -73,17 +51,5 @@ let addNewUser = () => {
     })
 }
 export default addNewUser
-// let newCustomerObject = () => {
 
-//     let newUser = {}
-//     let userName = document.querySelector("#userName").value
-//     let userEmail = document.querySelector("#userEmail").value
-//     let userPassword = document.querySelector("#userPassword").value
-//     newUser.userName = userName
-//     newUser.emailAddress = userEmail
-//     newUser.password = userPassword
-// }
-
-
-// export default newCustomerObject
 
