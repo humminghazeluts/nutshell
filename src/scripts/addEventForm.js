@@ -21,7 +21,7 @@ document.querySelector(".output").innerHTML =
     `
     document.querySelector("#addEvent").addEventListener("click", () => {
         displayEvent()
-        console.log("New event added")
+        alert("New event added")
     })
 }
 
