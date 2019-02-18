@@ -14,9 +14,9 @@ let displayUserView = () => {
     <div id="newsFormOutput"></div>
     <div id="taskFormOutput"></div>
     <div id="logUserOut"></div>
-    <div id="newsStoriesDisplay">Stories go here</div>
-    <div id="taskDisplay"></div>
-    <div id="eventDisplay"></div>`
+    <div id="newsStoriesDisplay" class="displays">Stories go here</div>
+    <div id="taskDisplay" class="displays"></div>
+    <div id="eventDisplay" class="displays"></div>`
     output.innerHTML = userViewHTML
     displayNewsForm()
     addEvent()

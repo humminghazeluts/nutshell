@@ -1,21 +1,3 @@
-body {
-    font-family: 'Acme', sans-serif
-}
-
-/* .output {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-} */
-
-.loginContainer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-#messageList {
+.displays {
     border: 1px solid black
 }
