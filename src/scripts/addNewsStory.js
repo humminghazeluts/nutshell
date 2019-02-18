@@ -15,7 +15,7 @@ let postNewsStory = () => {
     newStory.url = URL
     newStory.synopsis = synopsis
     newStory.currentTimeStamp = dateTime
-    newStory.userId = sessionStorage.getItem("userId")
+    newStory.userId = Number(sessionStorage.getItem("userId"))
     APIManager.postNewArticle(newStory)
     // let userPassword = document.querySelector("#userPassword").value
     // APIManager.postNewArticle().then((userArray) => {

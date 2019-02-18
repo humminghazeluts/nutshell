@@ -6,11 +6,11 @@ import displayUserView from "./UserView"
 import displayNewsForm from "./displayNewForm"
 import addEvent from "./addEventForm"
 
-displayUserView()
+// displayUserView()
 // displayNewsForm()
 // displayNewsForm()
 // console.log("hi")
-createRegistrationForm()
+// createRegistrationForm()
 
 // document.querySelector("#registerUser").addEventListener("click", event => {
 //     addNewUser()
@@ -23,10 +23,16 @@ createRegistrationForm()
 // createLoginForm()
 
 
-// import {createLandingPage, changePage} from "./createLandingPage"
+import {createLandingPage, changePage} from "./createLandingPage"
 
 
 // createLandingPage()
 // changePage.listenForEvent()
+
+createLandingPage()
+changePage.listenForEvent()
+
+let id = sessionStorage.getItem("userId")
+alert(id)
 
 
