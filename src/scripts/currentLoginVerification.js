@@ -1,3 +1,8 @@
+import {createLandingPage, changePage} from "./createLandingPage"
+import displayUserView from "./UserView"
+import sessionStorageDelete from "./sessionStorage"
+
+
 const currentLoginVerification = () =>{
     if (sessionStorage.getItem("userId") !== null ) {
        displayUserView()
@@ -8,4 +13,4 @@ const currentLoginVerification = () =>{
     }
 }
 
-export default currentLoginVerification()
+export default currentLoginVerification
