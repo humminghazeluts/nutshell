@@ -4,7 +4,7 @@
 //Function will clear sessionStorage after the logout buttin is clicked
 const sessionStorageDelete = () => {
     document.querySelector("#logOutButton").addEventListener("click", () => {
-        localStorage.clear()
+        sessionStorage.clear()
         location = location;
      }
     )
