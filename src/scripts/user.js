@@ -1,9 +1,9 @@
 
 
-const user = (userObject) => {
+const userHTML = (userObject) => {
     return `
         <section>
-        <h3>${userObject.username}</h3>
+        <h3>HELLO ${userObject.username}! Welcome to Your DashBoard!</h3>
     `
 }
-export default user
+export default userHTML
