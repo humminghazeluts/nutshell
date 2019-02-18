@@ -1,3 +1,5 @@
+import displayEvent from "./displayEvent";
+
 const addEvent = () => {
 document.querySelector(".output").innerHTML =
  `
@@ -17,6 +19,11 @@ document.querySelector(".output").innerHTML =
     <button id="addEvent">Add Event!</button>
     </div>
     `
+    document.querySelector("#addEvent").addEventListener("click", () => {
+        displayEvent()
+        console.log("New event added")
+    })
 }
+
 
 export default addEvent
