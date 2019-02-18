@@ -33,9 +33,18 @@ messageList()
 
 // createRegistrationForm()
 
+<<<<<<< HEAD
 // document.querySelector("#registerUser").addEventListener("click", event => {
 //     addNewUser()
 // })
+=======
+import {createLandingPage, changePage} from "./createLandingPage"
+import logOutButton from "./logout"
+import sessionStorageDelete from "./sessionStorage"
+import addTask from "./addTaskForm"
+import createTask from  "./submitAddTask"
+import printTasksToDom from "./taskPrintToDom"
+>>>>>>> master
 
 // createLandingPage()
 // changePage.listenForEvent()
@@ -43,13 +52,5 @@ messageList()
 
 // // createLoginForm()
 
-// logOutButton()
-// sessionStorageDelete()
-// addTask()
-// createTask()
-// addEvent()
-// displayEvent()
-// logOutButton()
-// sessionStorageDelete()
-// addTask()
-// createTask()
+
+

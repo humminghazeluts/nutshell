@@ -1,5 +1,6 @@
 import displayUserView from "./UserView"
 import postNewsStory from "./addNewsStory"
+import displayNewsStories from "./displayNewStories"
 
 let displayNewsForm = () => {
     // let today = new Date()
@@ -30,7 +31,7 @@ Add News Story!
         postNewsStory()
         console.log("New story added!")
     })
-    
+    // displayNewsStories()
 }
 
 export default displayNewsForm
