@@ -4,6 +4,7 @@ import addNewUser from "./registerNewUser"
 import APIManager from "./dataManager"
 import addEvent from "./addEventForm"
 import displayEvent from "./displayEvent"
+import printEventToDOM from "./printEventToDom"
 
 
 console.log("hi")
@@ -36,3 +37,4 @@ logOutButton()
 sessionStorageDelete()
 addTask()
 createTask()
+printEventToDOM(eventObj)
