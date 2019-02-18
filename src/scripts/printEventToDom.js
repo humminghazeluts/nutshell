@@ -5,24 +5,22 @@ let seeEvents = () => {
 APIManager.getEvents()
 .then(events => {
     events.forEach(event => {
+    let printEvent = document.querySelector("#eventDisplay")
+    if (event.userId === Number(sessionStorage.getItem("userId")))
     console.log(event)
+
+        printEvent.innerHTML += `
+        <h1>${event.nameOfEvent}</h1>
+        <p>${event.dateOfEvent}</p>
+        <p>${event.locationOfEvent}</p>
+        `
     });
 })
 }
 
 
-// Function to print Event to the DOM
-let eventOutputEl = document.querySelector("#eventDisplay")
-
-const printEventToDOM = (newEvent) => {
-return `
-<h3>User Id: ${newEvent.userId}</h3>
-<p>Event Name: ${newEvent.nameOfEvent}</p>
-<p>Event Date: ${newEvent.dateOfEvent}</p>
-<p>Event Location:${newEvent.locationOfEvent}</p>
-`
-}
 
 
 
-export default { seeEvents, printEventToDOM }
+
+export default seeEvents
