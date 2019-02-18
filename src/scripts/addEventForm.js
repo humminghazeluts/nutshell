@@ -1,7 +1,7 @@
 import displayEvent from "./displayEvent";
 
 const addEvent = () => {
-document.querySelector(".output").innerHTML =
+document.querySelector("#eventFormOutput").innerHTML =
  `
     <div>
     <fieldset>

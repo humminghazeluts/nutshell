@@ -1,4 +1,6 @@
-
+import addNewUser from "./registerNewUser"
+import APIManager from "./dataManager"
+import createLandingPage from "./createLandingPage"
 let createRegistrationForm = (location) => {
     location = document.querySelector(".output")
     let contactFormHTML = `
@@ -19,9 +21,13 @@ let createRegistrationForm = (location) => {
 <button id="registerUser">
 Register!
 </button>
-    </form>
+    </div>
 `
-location.innerHTML = contactFormHTML
+    location.innerHTML = contactFormHTML
+    document.querySelector("#registerUser").addEventListener("click", event => {
+        addNewUser()
+        createLandingPage()
+    })
 }
 
 export default createRegistrationForm
