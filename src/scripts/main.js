@@ -23,6 +23,7 @@ import logOutButton from "./logout"
 import sessionStorageDelete from "./sessionStorage"
 import addTask from "./addTaskForm"
 import createTask from  "./submitAddTask"
+import printTasksToDom from "./taskPrintToDom"
 
 
 createLandingPage()
@@ -36,3 +37,5 @@ logOutButton()
 sessionStorageDelete()
 addTask()
 createTask()
+
+
