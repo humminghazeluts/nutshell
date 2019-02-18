@@ -1,7 +1,7 @@
 import postNewTask from "./submitAddTask"
 
 const addTask = () => {
-    document.querySelector(".output").innerHTML =
+    document.querySelector("#taskFormOutput").innerHTML =
      `
         <div id="taskFormOutput">
 

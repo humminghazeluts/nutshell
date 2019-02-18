@@ -38,7 +38,7 @@ const APIManager = {
     },
     // add new article
     postNewArticle: (newArticle) => {
-        return fetch("http://localhost:8088/users", {
+        return fetch("http://localhost:8088/articles", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -2,17 +2,27 @@
 import createRegistrationForm from "./createRegistrationForm"
 import addNewUser from "./registerNewUser"
 import APIManager from "./dataManager"
+import displayUserView from "./UserView"
+import displayNewsForm from "./displayNewForm"
 import addEvent from "./addEventForm"
+import displayEvent from "./displayEvent"
 
+// displayUserView()
+// displayNewsForm()
+// displayNewsForm()
+// console.log("hi")
+// createRegistrationForm()
 
-console.log("hi")
-createRegistrationForm()
+// document.querySelector("#registerUser").addEventListener("click", event => {
+//     addNewUser()
+//     console.log("New user added!")
+// })
 
-document.querySelector("#registerUser").addEventListener("click", event => {
-    addNewUser()
-})
+// addEvent()
+// document.querySelector("#registerUser").addEventListener("click", event => {
+//     addNewUser()
+// })
 
-addEvent()
 // import createLoginForm from "./createLoginForm"
 
 // createLoginForm()
@@ -25,17 +35,21 @@ import addTask from "./addTaskForm"
 import createTask from  "./submitAddTask"
 import printTasksToDom from "./taskPrintToDom"
 
+// createLandingPage()
+// changePage.listenForEvent()
+
 
 createLandingPage()
 changePage.listenForEvent()
 
-let id = sessionStorage.getItem("userId")
-alert(id)
 
-
-logOutButton()
-sessionStorageDelete()
-addTask()
-createTask()
-
-
+// logOutButton()
+// sessionStorageDelete()
+// addTask()
+// createTask()
+// addEvent()
+// displayEvent()
+// logOutButton()
+// sessionStorageDelete()
+// addTask()
+// createTask()
