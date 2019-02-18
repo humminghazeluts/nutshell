@@ -1,5 +1,6 @@
 import APIManager from "./dataManager"
 let postNewsStory = () => {
+    
 
     let today = new Date()
     let date = today.getFullYear()+ "-" +(today.getMonth()+1)+"-"+today.getDate()
@@ -14,7 +15,7 @@ let postNewsStory = () => {
     newStory.url = URL
     newStory.synopsis = synopsis
     newStory.currentTimeStamp = dateTime
-    newStory.userId = 1
+    newStory.userId = sessionStorage.getItem("userId")
     APIManager.postNewArticle(newStory)
     // let userPassword = document.querySelector("#userPassword").value
     // APIManager.postNewArticle().then((userArray) => {
