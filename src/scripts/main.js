@@ -24,7 +24,10 @@ import addEvent from "./addEventForm"
 
 
 import {createLandingPage, changePage} from "./createLandingPage"
-
+import logOutButton from "./logout"
+import sessionStorageDelete from "./sessionStorage"
+import addTask from "./addTaskForm"
+import createTask from  "./submitAddTask"
 
 // createLandingPage()
 // changePage.listenForEvent()
@@ -36,3 +39,7 @@ let id = sessionStorage.getItem("userId")
 alert(id)
 
 
+logOutButton()
+sessionStorageDelete()
+addTask()
+createTask()
