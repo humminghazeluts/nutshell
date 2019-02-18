@@ -1,3 +1,5 @@
+import {createLandingPage, changePage} from "./createLandingPage"
+
 const currentLoginVerification = () =>{
     if (sessionStorage.getItem("userId") !== null ) {
        displayUserView()
@@ -8,4 +10,4 @@ const currentLoginVerification = () =>{
     }
 }
 
-export default currentLoginVerification()
+export default currentLoginVerification
