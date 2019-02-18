@@ -6,6 +6,11 @@ import displayUserView from "./UserView"
 import displayNewsForm from "./displayNewForm"
 import addEvent from "./addEventForm"
 import displayEvent from "./displayEvent"
+import createMessageForm from "./messageForm"
+import messageList from "./messageList"
+
+createMessageForm()
+messageList()
 
 // displayUserView()
 // displayNewsForm()
