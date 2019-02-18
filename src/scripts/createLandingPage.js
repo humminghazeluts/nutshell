@@ -1,23 +1,21 @@
+/*
+    Author: Abbey
+    Name: createLandingPage.js
+    Purpose: landing page that allows the user to choose between registering as a new member or logging in
+*/
+
 import createLoginForm from "./createLoginForm"
-// /*
-//     Author: Abbey
-//     Name: createLandingPage.js
-//     Purpose: landing page that allows the user to choose between registering as a new member or logging in
-// */
-
-
 import createRegistrationForm from "./createRegistrationForm"
 
 const createLandingPage = () => {
     document.querySelector(".output").innerHTML += `
-        <h1>Welcome to Humming Hazelnuts Dashboard Page </h1>
+        <h1>🌰 Welcome to Humming Hazelnuts Dashboard Page 🌰</h1>
         <div class="buttonSection">
         <button id="loginButton">Login</button>
         <button id="registerButton">Register</button>
         </div>
     `
 }
-
 
 const changePage = {
 
@@ -33,6 +31,5 @@ const changePage = {
 
     }
 }
-
 
 export { createLandingPage, changePage }
