@@ -6,11 +6,11 @@ import displayUserView from "./UserView"
 import displayNewsForm from "./displayNewForm"
 import addEvent from "./addEventForm"
 import displayEvent from "./displayEvent"
-import createMessageForm from "./messageForm"
-import messageList from "./messageList"
+import createChatRoom from "./messageForm"
 
-createMessageForm()
-messageList()
+
+createChatRoom()
+
 
 // displayUserView()
 // displayNewsForm()
@@ -33,18 +33,15 @@ messageList()
 
 // createRegistrationForm()
 
-<<<<<<< HEAD
 // document.querySelector("#registerUser").addEventListener("click", event => {
 //     addNewUser()
 // })
-=======
 import {createLandingPage, changePage} from "./createLandingPage"
 import logOutButton from "./logout"
 import sessionStorageDelete from "./sessionStorage"
 import addTask from "./addTaskForm"
 import createTask from  "./submitAddTask"
 import printTasksToDom from "./taskPrintToDom"
->>>>>>> master
 
 // createLandingPage()
 // changePage.listenForEvent()
