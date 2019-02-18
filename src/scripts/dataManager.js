@@ -31,7 +31,7 @@ const APIManager = {
             method: "DELETE",
         })
     },
-     // general see all articles function
+    // general see all articles function
     getArticles: () => {
         return fetch("http://localhost:8088/articles")
             .then(res => res.json())
@@ -95,8 +95,8 @@ const APIManager = {
     },
     // general see all tasks function
     getTasks: () => {
-        return fetch ("http://localhost:8088/tasks")
-        .then (res => res.json())
+        return fetch("http://localhost:8088/tasks")
+            .then(res => res.json())
     },
     // add new task
     postNewTask: (newTask) => {
@@ -127,7 +127,7 @@ const APIManager = {
     // general see all friendships function
     getfriendShip: () => {
         return fetch("http://localhost:8088/friendShips")
-        .then(res => res.json())
+            .then(res => res.json())
     },
     // add new friendship
     postNewFriendShip: (newfriendShip) => {
@@ -153,6 +153,36 @@ const APIManager = {
     deleteFriendShip: (friendShipId) => {
         return fetch(`http://localhost:8088/${friendShipId}`, {
             method: "DELETE",
+        })
+    },
+    // delete a message
+    deleteMessage: (messageId) => {
+        return fetch(`http://localhost:8088/${messageId}`, {
+            method: "DELETE",
+        })
+    }, //retrieve messages
+    getMessages: () => {
+        return fetch("http://localhost:8088/messages")
+            .then(res => res.json())
+    },
+    // add messages
+    postNewMessage: (newMessage) => {
+        return fetch("http://localhost:8088/messages", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newMessage)
+        })
+    },
+    // edit and existing messages
+    editMessage: (messageId, messageObject) => {
+        return fetch(`http://localhost:8088/${messageId}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(messageObject)
         })
     }
 }

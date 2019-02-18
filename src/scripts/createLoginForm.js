@@ -16,12 +16,16 @@ const printCurrentUser = currentUserHTML => {
 
 const createLoginForm = () => {
     document.querySelector(".output").innerHTML = `
+    <section class= "loginContainer">
+    <div id="loginForm">
         <h1>🌰 Login! Who needs Facebook when you have Humming Hazelnuts 🌰</h1>
         <label for="name">Username: </label>
         <input id="username" type="text">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password">
         <button id="loginButton">Submit</button>
+        </div>
+        </section>
     `
     document.querySelector("#loginButton").addEventListener("click", () => {
         const username = document.getElementById("username").value
