@@ -34,4 +34,6 @@ export default addNewUser
 //     APIManager.postNewUser(newUser)  
 // }
 
-// import default newCustomerObject
+
+// export default newCustomerObject
+
