@@ -43,13 +43,7 @@ createLandingPage()
 changePage.listenForEvent()
 
 
-addEvent()
-displayEvent()
-logOutButton()
-sessionStorageDelete()
-addTask()
-createTask()
-printEventToDOM(eventObj)
+
 // logOutButton()
 // sessionStorageDelete()
 // addTask()

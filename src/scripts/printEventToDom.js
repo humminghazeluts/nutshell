@@ -1,27 +1,28 @@
-import displayEvent from "./displayEvent"
+
 import APIManager from "./dataManager"
 
-
+let seeEvents = () => {
 APIManager.getEvents()
 .then(events => {
-    return events
-})
-.then(events => {
     events.forEach(event => {
-        eventOutputEl.innerHTML = printEventToDOM(event)
+    console.log(event)
     });
 })
+}
 
 
 // Function to print Event to the DOM
-let eventOutputEl = document.querySelector(".output")
+let eventOutputEl = document.querySelector("#eventDisplay")
+
 const printEventToDOM = (newEvent) => {
 return `
 <h3>User Id: ${newEvent.userId}</h3>
-<p>Event Name: ${newEvent.eventName}</p>
-<p>Event Date: ${newEvent.eventDate}</p>
-<p>Event Location:${newEvent.eventLocation}</p>
+<p>Event Name: ${newEvent.nameOfEvent}</p>
+<p>Event Date: ${newEvent.dateOfEvent}</p>
+<p>Event Location:${newEvent.locationOfEvent}</p>
 `
 }
 
-export default printEventToDOM
+
+
+export default { seeEvents, printEventToDOM }

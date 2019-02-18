@@ -4,6 +4,7 @@ import addTask from "./addTaskForm";
 import logOutButton from "./logout"
 import sessionStorageDelete from "./sessionStorage"
 import displayNewsStories from "./displayNewStories"
+import seeEvents from "./printEventToDom"
 
 let displayUserView = () => {
     let output = document.querySelector(".output")
@@ -20,8 +21,8 @@ let displayUserView = () => {
     logOutButton()
     sessionStorageDelete()
     displayNewsStories()
+    seeEvents()
 
-    
 }
 
 export default displayUserView
