@@ -23,7 +23,7 @@ const changePage = {
 
         document.querySelector(".output").addEventListener("click", () => {
             if (event.target.id.startsWith("loginButton")) {
-                createLoginForm() //should the submit Login.js just be a function here??
+                createLoginForm() 
             } else if (event.target.id.startsWith("registerButton")) {
                 createRegistrationForm()
             }
