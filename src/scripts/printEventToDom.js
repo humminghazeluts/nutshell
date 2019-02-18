@@ -4,6 +4,7 @@ import APIManager from "./dataManager"
 let seeEvents = () => {
 APIManager.getEvents()
 .then(events => {
+    console.log(events)
     events.forEach(event => {
     let printEvent = document.querySelector("#eventDisplay")
     if (event.userId === Number(sessionStorage.getItem("userId")))

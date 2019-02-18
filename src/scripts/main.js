@@ -45,15 +45,4 @@ changePage.listenForEvent()
 
 
 
-// logOutButton()
-// sessionStorageDelete()
-// addTask()
-// createTask()
-// addEvent()
-// displayEvent()
-// logOutButton()
-// sessionStorageDelete()
-// addTask()
-// createTask()
 
-printTasksToDom()
