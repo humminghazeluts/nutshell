@@ -10,6 +10,8 @@ import userHTML from "./user"
 
 const printCurrentUser = currentUserHTML => {
     document.querySelector(".output").innerHTML = currentUserHTML
+    let id = sessionStorage.getItem("userId")
+    alert(id)
 }
 
 const createLoginForm = () => {
@@ -29,7 +31,7 @@ const createLoginForm = () => {
             .then(users => {
                 users.forEach(user => {
                     if (user.username === username && user.password === password) {
-                        sessionStorage.setItem(user.username, user.password)
+                        sessionStorage.setItem("userId", user.id)
                         let currentUserHTML = userHTML(user)
                         printCurrentUser(currentUserHTML)
                     }
