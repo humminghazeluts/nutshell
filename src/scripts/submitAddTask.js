@@ -1,4 +1,5 @@
 import createTask from "./addTaskObjectCreate"
+import APIManager from "./dataManager"
 
 //Creates addTask Object and sends to JSON
 
@@ -9,6 +10,7 @@ import createTask from "./addTaskObjectCreate"
     const completed= document.querySelector("#completed__input").checked
 
     const newTaskObject = createTask(taskName, taskDate, completed)
+    APIManager.postNewTask(newTaskObject)
     console.log(newTaskObject)
     // apiManager.postSubmit(newTaskObject)
 
