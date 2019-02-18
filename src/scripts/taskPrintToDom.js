@@ -6,7 +6,7 @@ function printTasksToDom(){
         console.log(tasks)
         let printPlace = document.querySelector(".output")
         tasks.forEach(task => {
-            if (task.userId ===){
+            if (task.userId === sessionStorage.getItem("userId"){
 
             }
 
@@ -20,8 +20,8 @@ function printTasksToDom(){
         })
 
 
-})
-    }
+    })
+}
 
 
 
