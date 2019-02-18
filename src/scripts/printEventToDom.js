@@ -8,7 +8,6 @@ APIManager.getEvents()
     events.forEach(event => {
     let printEvent = document.querySelector("#eventDisplay")
     if (event.userId === Number(sessionStorage.getItem("userId")))
-    console.log(event)
 
         printEvent.innerHTML += `
         <h1>${event.nameOfEvent}</h1>

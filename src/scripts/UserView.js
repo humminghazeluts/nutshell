@@ -5,6 +5,7 @@ import logOutButton from "./logout"
 import sessionStorageDelete from "./sessionStorage"
 import displayNewsStories from "./displayNewStories"
 import printTasksToDom from "./taskPrintToDom"
+import seeEvents from "./printEventToDom"
 
 let displayUserView = () => {
     let output = document.querySelector(".output")
@@ -26,7 +27,6 @@ let displayUserView = () => {
     displayNewsStories()
     printTasksToDom()
 
-    
 }
 
 export default displayUserView
