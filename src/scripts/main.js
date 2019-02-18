@@ -1,4 +1,3 @@
-
 import createRegistrationForm from "./createRegistrationForm"
 import addNewUser from "./registerNewUser"
 import APIManager from "./dataManager"
@@ -6,6 +5,19 @@ import displayUserView from "./UserView"
 import displayNewsForm from "./displayNewForm"
 import addEvent from "./addEventForm"
 import displayEvent from "./displayEvent"
+
+import {createLandingPage, changePage} from "./createLandingPage"
+import logOutButton from "./logout"
+import sessionStorageDelete from "./sessionStorage"
+import addTask from "./addTaskForm"
+import createTask from  "./submitAddTask"
+import printTasksToDom from "./taskPrintToDom"
+import currentLoginVerification from "./currentLoginVerification"
+
+
+
+currentLoginVerification()
+
 
 // displayUserView()
 // displayNewsForm()
@@ -28,20 +40,8 @@ import displayEvent from "./displayEvent"
 // createLoginForm()
 
 
-import {createLandingPage, changePage} from "./createLandingPage"
-import logOutButton from "./logout"
-import sessionStorageDelete from "./sessionStorage"
-import addTask from "./addTaskForm"
-import createTask from  "./submitAddTask"
-import printTasksToDom from "./taskPrintToDom"
-
 // createLandingPage()
 // changePage.listenForEvent()
-
-
-createLandingPage()
-changePage.listenForEvent()
-
 
 
 
