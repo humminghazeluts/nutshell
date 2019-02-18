@@ -2,7 +2,7 @@
 let createRegistrationForm = (location) => {
     location = document.querySelector(".output")
     let contactFormHTML = `
-<form>
+<div>
 <fieldset>
     <label for="userName">User Name</label>
     <input type="text" name="userName" id="userName">
@@ -16,10 +16,10 @@ let createRegistrationForm = (location) => {
     <input type="password" name="userPassword" id="userPassword">
 </fieldset>
 
-<button id="createCustomerObject" class="btn btn-info people">
-    Add Customer
+<button id="registerUser">
+Register!
 </button>
-</form>
+    </form>
 `
 location.innerHTML = contactFormHTML
 }
