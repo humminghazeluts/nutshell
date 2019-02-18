@@ -1,5 +1,5 @@
 const addEvent = () => {
-document.querySelector(".eventFormOutput").innerHTML =
+document.querySelector(".output").innerHTML =
  `
     <div>
     <fieldset>
@@ -8,7 +8,7 @@ document.querySelector(".eventFormOutput").innerHTML =
     </fieldset>
     <fieldset>
         <label for="eventDate">Date of Event: </label>
-        <input type="text" name="eventDate" id="eventDate">
+        <input type="date" name="eventDate" id="eventDate">
     </fieldset>
     <fieldset>
         <label for="eventLocation">Event Location: </label>
