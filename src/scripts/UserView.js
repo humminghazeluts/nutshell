@@ -1,4 +1,5 @@
 import displayNewsForm from "./displayNewForm"
+import addEvent from "./addEventForm"
 
 let displayUserView = () => {
     let output = document.querySelector(".output")
@@ -10,6 +11,7 @@ let displayUserView = () => {
     <div id="logUserOut"</div>`
     output.innerHTML = userViewHTML
     displayNewsForm()
+    addEvent()
     
 }
 

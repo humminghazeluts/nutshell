@@ -1,4 +1,4 @@
-// import APIManager from "./dataManager"
+import APIManager from "./dataManager"
 let addNewUser = () => {
 
 
@@ -6,11 +6,62 @@ let addNewUser = () => {
     let userName = document.querySelector("#userName").value
     let userEmail = document.querySelector("#userEmail").value
     let userPassword = document.querySelector("#userPassword").value
+    let allFilledIn = false
+    let uniqueUserName = false
+    let uniqueEmail = false
     APIManager.getUsers().then((userArray) => {
         if (userName === "" || userEmail === "" || userPassword === "") {
             alert("Please fill in all information")
         } else {
+            allFilledIn = true
+            // newUser.username = userName
+            // newUser.emailAddress = userEmail
+            // newUser.password = userPassword
+             
+            // document.querySelector("#userName").value = ""
+            // document.querySelector("#userEmail").value = ""
+            // document.querySelector("#userPassword").value = ""
+            // return newUser
+        }
+        for (let i = 0; i < userArray.length; i++) {
+            let theUserName = userArray[i].username;
+            let theEmail = userArray[i].emailAddress;
+            if (theUserName === userName) {
+                alert("Please use a different usernsame")
+                uniqueUserName === false
+                uniqueEmail === false
+                return
 
+            } else {
+                uniqueUserName = true
+            }
+            if (theEmail === userEmail) {
+                alert("Please use a different email address")
+                uniqueEmail === false
+                uniqueUserName === false
+                return
+
+            } else {
+                uniqueEmail = true
+            }
+        }
+        // userArray.forEach(user => {
+        //     if (theUserName === userName) {
+        //         alert("Please use a different usernsame")
+        //         uniqueUserName === false
+        //     } else {
+        //         uniqueUserName = true
+        //     } 
+        //     if (theEmail === userEmail) {
+        //         alert("Please use a different email address")
+        //         uniqueEmail === false
+        //     } else {
+        //         uniqueEmail = true
+        //     }
+        //     // console.log(allFilledIn, uniqueEmail, uniqueUserName)
+        // }); 
+        console.log(allFilledIn, uniqueEmail, uniqueUserName)
+        if (allFilledIn === true && uniqueUserName === true && uniqueEmail === true) {
             newUser.username = userName
             newUser.emailAddress = userEmail
             newUser.password = userPassword
@@ -23,7 +74,7 @@ let addNewUser = () => {
 }
 export default addNewUser
 // let newCustomerObject = () => {
-    
+
 //     let newUser = {}
 //     let userName = document.querySelector("#userName").value
 //     let userEmail = document.querySelector("#userEmail").value
@@ -31,7 +82,6 @@ export default addNewUser
 //     newUser.userName = userName
 //     newUser.emailAddress = userEmail
 //     newUser.password = userPassword
-//     APIManager.postNewUser(newUser)  
 // }
 
 // import default newCustomerObject

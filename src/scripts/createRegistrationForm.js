@@ -1,4 +1,5 @@
-
+import addNewUser from "./registerNewUser"
+import APIManager from "./dataManager"
 let createRegistrationForm = (location) => {
     location = document.querySelector(".output")
     let contactFormHTML = `
@@ -21,11 +22,10 @@ Register!
 </button>
     </div>
 `
-location.innerHTML = contactFormHTML
-document.querySelector("#registerUser").addEventListener("click", event => {
-    addNewUser()
-    console.log("New user added!")
-})
+    location.innerHTML = contactFormHTML
+    document.querySelector("#registerUser").addEventListener("click", event => {
+        addNewUser()
+    })
 }
 
 export default createRegistrationForm

@@ -4,18 +4,20 @@ import addNewUser from "./registerNewUser"
 import APIManager from "./dataManager"
 import displayUserView from "./UserView"
 import displayNewsForm from "./displayNewForm"
+import addEvent from "./addEventForm"
 
 displayUserView()
 // displayNewsForm()
 // displayNewsForm()
-console.log("hi")
-// createRegistrationForm()
+// console.log("hi")
+createRegistrationForm()
 
 // document.querySelector("#registerUser").addEventListener("click", event => {
 //     addNewUser()
 //     console.log("New user added!")
 // })
 
+// addEvent()
 // import createLoginForm from "./createLoginForm"
 
 // createLoginForm()

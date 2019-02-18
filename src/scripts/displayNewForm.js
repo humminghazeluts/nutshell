@@ -1,11 +1,12 @@
 import displayUserView from "./UserView"
+import postNewsStory from "./addNewsStory"
 
 let displayNewsForm = () => {
-    let today = new Date()
-    let date = today.getFullYear()+ "-" +(today.getMonth()+1)+"-"+today.getDate()
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
-    let dateTime = date+" " + time
-    console.log(dateTime)
+    // let today = new Date()
+    // let date = today.getFullYear()+ "-" +(today.getMonth()+1)+"-"+today.getDate()
+    // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+    // let dateTime = date+" " + time
+    // console.log(dateTime)
     let newsFormDisplayBox = document.querySelector("#newsFormOutput")
     // let newsFormDisplayBox = document.querySelector(".output")
     let newsFormHTML = `
@@ -25,6 +26,10 @@ Add News Story!
     </div>
     `
     newsFormDisplayBox.innerHTML = newsFormHTML
+    document.querySelector("#addNewStory").addEventListener("click", event => {
+        postNewsStory()
+        console.log("New story added!")
+    })
     
 }
 
