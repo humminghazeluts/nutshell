@@ -1,14 +1,29 @@
 
-// import createRegistrationForm from "./createRegistrationForm"
-// import addNewUser from "./registerNewUser"
-// import APIManager from "./dataManager"
-// import addEvent from "./addEventForm"
+import createRegistrationForm from "./createRegistrationForm"
+import addNewUser from "./registerNewUser"
+import APIManager from "./dataManager"
+import displayUserView from "./UserView"
+import displayNewsForm from "./displayNewForm"
+import addEvent from "./addEventForm"
+import displayEvent from "./displayEvent"
 
+// displayUserView()
+// displayNewsForm()
+// displayNewsForm()
+// console.log("hi")
+// createRegistrationForm()
 
-// createLandingPage()
-// changePage.listenForEvent()
+// document.querySelector("#registerUser").addEventListener("click", event => {
+//     addNewUser()
+//     console.log("New user added!")
+// })
 
+// addEvent()
+// document.querySelector("#registerUser").addEventListener("click", event => {
+//     addNewUser()
+// })
 
+// import createLoginForm from "./createLoginForm"
 
 
 // createRegistrationForm()
@@ -17,31 +32,19 @@
 //     addNewUser()
 // })
 
-// addEvent()
-// // import createLoginForm from "./createLoginForm"
-
-// // createLoginForm()
-
-
-// import {createLandingPage, changePage} from "./createLandingPage"
-// import logOutButton from "./logout"
-// import sessionStorageDelete from "./sessionStorage"
-// import addTask from "./addTaskForm"
-// import createTask from  "./submitAddTask"
-
-
-
 // createLandingPage()
 // changePage.listenForEvent()
 
-// let id = sessionStorage.getItem("userId")
 
-
+// // createLoginForm()
 
 // logOutButton()
 // sessionStorageDelete()
 // addTask()
 // createTask()
-
-import createMessageForm from "./chatMessages"
-createMessageForm()
+// addEvent()
+// displayEvent()
+// logOutButton()
+// sessionStorageDelete()
+// addTask()
+// createTask()

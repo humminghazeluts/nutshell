@@ -4,7 +4,7 @@
     Purpose: creates the HTML for the login form and the listening event to verify correct username and password 
             was entered. Then executes the user.js based off the current user logged in.
 */
-
+import displayUserView from "./UserView"
 import APIManager from "./dataManager"
 import userHTML from "./user"
 
@@ -38,6 +38,7 @@ const createLoginForm = () => {
                         sessionStorage.setItem("userId", user.id)
                         let currentUserHTML = userHTML(user)
                         printCurrentUser(currentUserHTML)
+                        displayUserView()
                     }
                 })
             })
