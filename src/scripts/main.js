@@ -5,6 +5,7 @@ import APIManager from "./dataManager"
 import displayUserView from "./UserView"
 import displayNewsForm from "./displayNewForm"
 import addEvent from "./addEventForm"
+import displayEvent from "./displayEvent"
 
 // displayUserView()
 // displayNewsForm()
@@ -18,6 +19,10 @@ import addEvent from "./addEventForm"
 // })
 
 // addEvent()
+// document.querySelector("#registerUser").addEventListener("click", event => {
+//     addNewUser()
+// })
+
 // import createLoginForm from "./createLoginForm"
 
 // createLoginForm()
@@ -32,13 +37,17 @@ import createTask from  "./submitAddTask"
 // createLandingPage()
 // changePage.listenForEvent()
 
+
 createLandingPage()
 changePage.listenForEvent()
 
-let id = sessionStorage.getItem("userId")
-alert(id)
 
-
+// logOutButton()
+// sessionStorageDelete()
+// addTask()
+// createTask()
+// addEvent()
+// displayEvent()
 // logOutButton()
 // sessionStorageDelete()
 // addTask()

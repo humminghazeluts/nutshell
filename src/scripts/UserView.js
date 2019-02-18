@@ -1,5 +1,8 @@
 import displayNewsForm from "./displayNewForm"
 import addEvent from "./addEventForm"
+import addTask from "./addTaskForm";
+import logOutButton from "./logout"
+import sessionStorageDelete from "./sessionStorage"
 
 let displayUserView = () => {
     let output = document.querySelector(".output")
@@ -12,6 +15,9 @@ let displayUserView = () => {
     output.innerHTML = userViewHTML
     displayNewsForm()
     addEvent()
+    addTask()
+    logOutButton()
+    sessionStorageDelete()
     
 }
 
