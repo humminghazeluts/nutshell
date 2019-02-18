@@ -8,4 +8,4 @@ const currentLoginVerification = () =>{
     }
 }
 
-export default currentLoginVerification()
+export default currentLoginVerification
