@@ -34,6 +34,7 @@ import logOutButton from "./logout"
 import sessionStorageDelete from "./sessionStorage"
 import addTask from "./addTaskForm"
 import createTask from  "./submitAddTask"
+import printTasksToDom from "./taskPrintToDom"
 
 // createLandingPage()
 // changePage.listenForEvent()
@@ -54,3 +55,5 @@ changePage.listenForEvent()
 // sessionStorageDelete()
 // addTask()
 // createTask()
+
+printTasksToDom()
