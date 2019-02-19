@@ -1,6 +1,5 @@
 
 import APIManager from "./dataManager"
-import displayEvent from "./displayEvent"
 
 let seeEvents = () => {
 APIManager.getEvents()

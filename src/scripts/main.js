@@ -9,7 +9,7 @@ import printEventToDOM from "./printEventToDom"
 import createChatRoom from "./messageForm"
 
 
-createChatRoom()
+// createChatRoom()
 
 
 import {createLandingPage, changePage} from "./createLandingPage"
