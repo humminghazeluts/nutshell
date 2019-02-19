@@ -10,15 +10,16 @@ import messageHTML from "./message"
 
 
 const createChatRoom = () => {
-    
+    let userName = sessionStorage.getItem("userName")
     document.querySelector("#messageDisplay").innerHTML = `
     <section class= "chatRoomContainer">
     <div id="messageList">These are the messages</div>
     <div id="messageForm">
     <h1>Chat Room</h1>
-    <h2>Hello (username here) </h2>
+    <h2>Hello ${userName} </h2>
     <label for="message">Enter New Message:</label>
     <textarea id="messageText" rows="4" cols="50" placeholder="Enter text here"></textarea>
+    <input type="hidden" id="contactId">
     <button id="messageButton">Submit</button>
     </div>
     </section>

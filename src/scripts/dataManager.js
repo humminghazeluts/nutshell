@@ -165,6 +165,10 @@ const APIManager = {
         return fetch("http://localhost:8088/messages?_expand=user")
             .then(res => res.json())
     },
+    getindividualMessages: (messageId) => {
+        return fetch(`http://localhost:8088/messages/${messageId}?_expand=user`)
+            .then(res => res.json())
+    },
     // add messages
     postNewMessage: (newMessage) => {
         return fetch("http://localhost:8088/messages", {
@@ -177,7 +181,7 @@ const APIManager = {
     },
     // edit and existing messages
     editMessage: (messageId, messageObject) => {
-        return fetch(`http://localhost:8088/${messageId}`, {
+        return fetch(`http://localhost:8088/messages/${messageId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

@@ -11,9 +11,9 @@ import APIManager from "./dataManager"
             // Object saved from click event
             const newEvent= {
                 userId: 1,
-                eventName: eventName,
-                eventDate: eventDate,
-                eventLocation: eventLocation
+                nameOfEvent: eventName,
+                dateOfEvent: eventDate,
+                locationOfEvent: eventLocation
             }
             APIManager.postNewEvent(newEvent)
 
