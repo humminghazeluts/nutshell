@@ -6,7 +6,7 @@ function printTasksToDom(){
         let printPlace = document.querySelector("#taskDisplay")
         tasks.forEach(task => {
             if (task.userId === Number(sessionStorage.getItem("userId"))){
-                console.log(task)
+                // console.log(task)
 
                 printPlace.innerHTML += `
                         <h1>${task.taskName}</h1>

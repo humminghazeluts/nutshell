@@ -7,12 +7,14 @@ import APIManager from "./dataManager"
 const messageHTML = {
     createMessageListHTML: function (newMessage) {
         let userName = sessionStorage.getItem("userName")
+        
+
 
         return `
 
-        <section id="message-${newMessage.id}"> 
+        <section id="message--${newMessage.id}"> 
             
-            <div>${userName}: ${newMessage.messages}</div>
+            <div><strong>${newMessage.user.username}:</strong> ${newMessage.messages}</div>
             <button>Edit Message</button>
         </section>
         </hr>
