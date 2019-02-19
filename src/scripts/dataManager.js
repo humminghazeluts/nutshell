@@ -120,7 +120,7 @@ const APIManager = {
     },
     // delete task
     deleteTask: (taskId) => {
-        return fetch(`http://localhost:8088/${taskId}`, {
+        return fetch(`http://localhost:8088/tasks/${taskId}`, {
             method: "DELETE",
         })
     },

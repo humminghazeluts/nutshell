@@ -1,5 +1,6 @@
 import APIManager from "./dataManager"
 
+
 function printTasksToDom(){
 
     APIManager.getTasks().then((tasks)=>{
@@ -12,13 +13,25 @@ function printTasksToDom(){
                         <h1>${task.taskName}</h1>
                         <p>${task.expectedCompletionDate}</p>
                         <p>${task.completed}</p>
+                        <button id="deleteContactButton--${task.userId}">Delete</button>
+                                        `
 
-                                    `
             }
         })
+    })
+
+    document.querySelector("#taskDisplay").addEventListener("click", () => {
+        if (event.target.id.startsWith("deleteContactButton--")) {
+            console.log("success")
+            const taskId = event.target.id.split("--")[1]
+            console.log(taskId)
+            APIManager.deleteTask(taskId)
+        }
     })
 }
 
 
 
+
 export default printTasksToDom
+

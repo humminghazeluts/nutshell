@@ -30,6 +30,8 @@ const addTask = () => {
         document.querySelector("#addTaskButton").addEventListener("click", (event) => {
             postNewTask()
     } )
+
+
 }
 
 export default addTask
