@@ -1,8 +1,13 @@
 import APIManager from "./dataManager"
+import buttonText from "./messageButtonStatus"
 
 let editMessage = () => {
     let messageDisplay = document.querySelector("#messageList")
+    let messagedId = document.getElementById("messageId")
+    
+
     messageDisplay.addEventListener("click", event => {
+        // buttonText()
         if (event.target.id.startsWith("--")) {
             console.log("edit clicked")
             let messageId = event.target.id.split("--")[1]

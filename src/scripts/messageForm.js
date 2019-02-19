@@ -5,11 +5,13 @@
 //there should be an affordance to edit logged in user's chat message and save
 import APIManager from "./dataManager"
 import messageHTML from "./message"
+import buttonText from "./messageButtonStatus"
 
 
 
 
 const createChatRoom = () => {
+    
     let userName = sessionStorage.getItem("userName")
     document.querySelector("#messageDisplay").innerHTML = `
     <section class= "chatRoomContainer">
@@ -20,11 +22,11 @@ const createChatRoom = () => {
     <label for="message">Enter New Message:</label>
     <textarea id="messageText" rows="4" cols="50" placeholder="Enter text here"></textarea>
     <input type="hidden" id="messageId">
-    <button id="messageButton">Submit</button>
+    <button id="messageButton"></button>
     </div>
     </section>
     `
-
+    
     
     const printMessageToDom = message => {
         const messageEl = document.querySelector("#messageList")
@@ -49,10 +51,13 @@ const createChatRoom = () => {
     putMessagesinDom()
 
 
+
     document.querySelector("#messageButton").addEventListener("click", () => {
         let messagedId = document.getElementById("messageId").value
+        
 
         const message = document.getElementById("messageText").value
+        
         let userId = Number(sessionStorage.getItem("userId"))
         const newMessage = {
             messages: message,
@@ -68,7 +73,10 @@ const createChatRoom = () => {
         } else {
         
             console.log("not empty")
-            APIManager.editMessage(messageId.value, newMessage).then(putMessagesinDom)
+            APIManager.editMessage(messageId.value, newMessage).then(putMessagesinDom).then(()=> {
+                document.getElementById("messageId").value = ""
+            })
+
         }
     })
 
