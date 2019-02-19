@@ -4,11 +4,15 @@ let displayNewsStories = () => {
     let id = Number(sessionStorage.getItem("userId"))
     APIManager.getArticles(id).then((articles) => {
         // console.log(articles)
+        
         articles.forEach(article => {
-            let htmlRep = `
-            <h1>${article.synopsis}</h1>
-            <h2>${article.url}</h2> `
-            display.innerHTML += htmlRep
+            if (article.userId === Number(sessionStorage.getItem("userId"))){
+
+                let htmlRep = `
+                <h1>${article.synopsis}</h1>
+                <h2>${article.url}</h2> `
+                display.innerHTML += htmlRep
+            }
         });
     })
 }
