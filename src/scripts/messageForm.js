@@ -11,7 +11,7 @@ import buttonText from "./messageButtonStatus"
 
 
 const createChatRoom = () => {
-    
+
     let userName = sessionStorage.getItem("userName")
     document.querySelector("#messageDisplay").innerHTML = `
     <section class= "chatRoomContainer">
@@ -26,8 +26,8 @@ const createChatRoom = () => {
     </div>
     </section>
     `
-    
-    
+
+
     const printMessageToDom = message => {
         const messageEl = document.querySelector("#messageList")
 
@@ -40,10 +40,19 @@ const createChatRoom = () => {
         messageEl.innerHTML = ""
         APIManager.getMessages()
             .then(messages => {
-                messages.forEach(message => {
-                    const html = messageHTML.createMessageListHTML(message)
-                    printMessageToDom(html)
-                })
+                for (let i = 0; i < messages.length; i++) {
+                    let message = messages[i];
+                    console.log(messages.length)
+                    if (message.id >= (messages.length-4)) {
+                        const html = messageHTML.createMessageListHTML(message)
+                        printMessageToDom(html)
+                    }
+
+                }
+                // messages.forEach(message => {
+                //     const html = messageHTML.createMessageListHTML(message)
+                //     printMessageToDom(html)
+                // })
 
             })
     }
@@ -54,10 +63,10 @@ const createChatRoom = () => {
 
     document.querySelector("#messageButton").addEventListener("click", () => {
         let messagedId = document.getElementById("messageId").value
-        
+
 
         const message = document.getElementById("messageText").value
-        
+
         let userId = Number(sessionStorage.getItem("userId"))
         const newMessage = {
             messages: message,
@@ -69,11 +78,13 @@ const createChatRoom = () => {
 
             APIManager.postNewMessage(newMessage).then(() => {
                 putMessagesinDom()
+            }).then(()=> {
+                document.querySelector("#messageText").value= ""
             })
         } else {
-        
+
             console.log("not empty")
-            APIManager.editMessage(messageId.value, newMessage).then(putMessagesinDom).then(()=> {
+            APIManager.editMessage(messageId.value, newMessage).then(putMessagesinDom).then(() => {
                 document.getElementById("messageId").value = ""
             })
 
