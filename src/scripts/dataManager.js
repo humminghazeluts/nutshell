@@ -17,7 +17,7 @@ const APIManager = {
     },
     // edit existing user
     editUser: (userId, userObj) => {
-        return fetch(`http://localhost:8088/${userId}`, {
+        return fetch(`http://localhost:8088/users/${userId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -27,7 +27,7 @@ const APIManager = {
     },
     // delete user
     deleteUser: (userId) => {
-        return fetch(`http://localhost:8088/${userId}`, {
+        return fetch(`http://localhost:8088/users/${userId}`, {
             method: "DELETE",
         })
     },
@@ -79,7 +79,7 @@ const APIManager = {
     },
     // edit existing event
     editEvent: (eventId, eventObj) => {
-        return fetch(`http://localhost:8088/events/${eventId}`, {
+        return fetch(`http://localhost:8088/events/events/${eventId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
