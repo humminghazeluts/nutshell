@@ -5,6 +5,8 @@ import logOutButton from "./logout"
 import sessionStorageDelete from "./sessionStorage"
 import displayNewsStories from "./displayNewStories"
 import printTasksToDom from "./taskPrintToDom"
+import changeNews from "./editAndDeleteNews";
+
 
 let displayUserView = () => {
     let output = document.querySelector(".output")
@@ -25,6 +27,8 @@ let displayUserView = () => {
     sessionStorageDelete()
     displayNewsStories()
     printTasksToDom()
+    changeNews()
+    
 
     
 }

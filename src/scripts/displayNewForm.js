@@ -1,6 +1,6 @@
 import displayUserView from "./UserView"
 import postNewsStory from "./addNewsStory"
-import displayNewsStories from "./displayNewStories"
+import displayNewStories from "./displayNewStories"
 
 let displayNewsForm = () => {
     // let today = new Date()
@@ -29,6 +29,7 @@ Add News Story!
     newsFormDisplayBox.innerHTML = newsFormHTML
     document.querySelector("#addNewStory").addEventListener("click", event => {
         postNewsStory()
+        event.preventDefault()
         console.log("New story added!")
     })
     // displayNewsStories()

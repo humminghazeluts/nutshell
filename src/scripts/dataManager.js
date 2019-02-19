@@ -48,7 +48,7 @@ const APIManager = {
     },
     // edit existing user
     editArticle: (articleId, articleObj) => {
-        return fetch(`http://localhost8088/${articleId}`, {
+        return fetch(`http://localhost8088/articles/${articleId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -58,7 +58,7 @@ const APIManager = {
     },
     // delete article
     deleteArticle: (articleId) => {
-        return fetch(`http://localhost:8088/${articleId}`, {
+        return fetch(`http://localhost:8088/articles/${articleId}`, {
             method: "DELETE",
         })
     },

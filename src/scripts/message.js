@@ -10,6 +10,7 @@ const messageHTML = {
 
         <section id="message-${newMessage.id}"> 
             <div>${newMessage.messages}</div>
+            
         </section>
         </hr>
     `

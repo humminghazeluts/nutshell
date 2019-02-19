@@ -1,26 +1,29 @@
-import createRegistrationForm from "./createRegistrationForm"
-import addNewUser from "./registerNewUser"
-import APIManager from "./dataManager"
-import displayUserView from "./UserView"
-import displayNewsForm from "./displayNewForm"
-import addEvent from "./addEventForm"
-import displayEvent from "./displayEvent"
-import createChatRoom from "./messageForm"
+// import createRegistrationForm from "./createRegistrationForm"
+// import addNewUser from "./registerNewUser"
+// import APIManager from "./dataManager"
+// import displayUserView from "./UserView"
+// import displayNewsForm from "./displayNewForm"
+// import addEvent from "./addEventForm"
+// import displayEvent from "./displayEvent"
+// import createChatRoom from "./messageForm"
 
 
-createChatRoom()
+// createChatRoom()
+// import displayNewStories from "./displayNewStories"
 
+// displayNewStories()
 
-import {createLandingPage, changePage} from "./createLandingPage"
-import logOutButton from "./logout"
-import sessionStorageDelete from "./sessionStorage"
-import addTask from "./addTaskForm"
-import createTask from  "./submitAddTask"
-import printTasksToDom from "./taskPrintToDom"
+// import {createLandingPage, changePage} from "./createLandingPage"
+// import logOutButton from "./logout"
+// import sessionStorageDelete from "./sessionStorage"
+// import addTask from "./addTaskForm"
+// import createTask from  "./submitAddTask"
+// import printTasksToDom from "./taskPrintToDom"
 import currentLoginVerification from "./currentLoginVerification"
 
+// createLandingPage()
 
-
+// changePage()
 currentLoginVerification()
 
 
