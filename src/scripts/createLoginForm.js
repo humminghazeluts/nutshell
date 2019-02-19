@@ -36,6 +36,7 @@ const createLoginForm = () => {
                 users.forEach(user => {
                     if (user.username === username && user.password === password) {
                         sessionStorage.setItem("userId", user.id)
+                        sessionStorage.setItem("userName", user.username)
                         let currentUserHTML = userHTML(user)
                         printCurrentUser(currentUserHTML)
                         displayUserView()

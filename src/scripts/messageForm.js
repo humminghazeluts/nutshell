@@ -11,7 +11,7 @@ import messageHTML from "./message"
 
 const createChatRoom = () => {
     
-    document.querySelector(".output").innerHTML = `
+    document.querySelector("#messageDisplay").innerHTML = `
     <section class= "chatRoomContainer">
     <div id="messageList">These are the messages</div>
     <div id="messageForm">
@@ -44,10 +44,11 @@ const createChatRoom = () => {
 putMessagesinDom()
     document.querySelector("#messageButton").addEventListener("click", () => {
         const message = document.getElementById("messageText").value
+        let userId = Number(sessionStorage.getItem("userId"))
 
         const newMessage = {
             messages: message,
-            userId: 1
+            userId: userId
         }
 
         APIManager.postNewMessage(newMessage).then(()=> {

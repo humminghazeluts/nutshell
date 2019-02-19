@@ -5,6 +5,7 @@ import logOutButton from "./logout"
 import sessionStorageDelete from "./sessionStorage"
 import displayNewsStories from "./displayNewStories"
 import printTasksToDom from "./taskPrintToDom"
+import createChatRoom from "./messageForm"
 
 let displayUserView = () => {
     let output = document.querySelector(".output")
@@ -16,7 +17,8 @@ let displayUserView = () => {
     <div id="logUserOut"></div>
     <div id="newsStoriesDisplay" class="displays">Stories go here</div>
     <div id="taskDisplay" class="displays"></div>
-    <div id="eventDisplay" class="displays"></div>`
+    <div id="eventDisplay" class="displays"></div>
+    <div id="messageDisplay"></div>`
     output.innerHTML = userViewHTML
     displayNewsForm()
     addEvent()
@@ -24,6 +26,7 @@ let displayUserView = () => {
     logOutButton()
     sessionStorageDelete()
     displayNewsStories()
+    createChatRoom()
     printTasksToDom()
 
     

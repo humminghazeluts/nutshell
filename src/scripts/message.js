@@ -3,13 +3,17 @@
     Name: message.js
     Purpose: creates the HTML for the chat room message list
 */
-
+import APIManager from "./dataManager"
 const messageHTML = {
-    createMessageListHTML: function (newMessage) { 
+    createMessageListHTML: function (newMessage) {
+        let userName = sessionStorage.getItem("userName")
+
         return `
 
         <section id="message-${newMessage.id}"> 
-            <div>${newMessage.messages}</div>
+            
+            <div>${userName}: ${newMessage.messages}</div>
+            <button>Edit Message</button>
         </section>
         </hr>
     `

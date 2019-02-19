@@ -8,7 +8,7 @@ import displayEvent from "./displayEvent"
 import createChatRoom from "./messageForm"
 
 
-createChatRoom()
+// createChatRoom()
 
 
 import {createLandingPage, changePage} from "./createLandingPage"
