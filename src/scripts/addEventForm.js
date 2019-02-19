@@ -21,6 +21,7 @@ document.querySelector("#eventFormOutput").innerHTML =
     `
     document.querySelector("#addEvent").addEventListener("click", () => {
         displayEvent()
+        event.preventDefault()
         alert("New event added")
     })
 }

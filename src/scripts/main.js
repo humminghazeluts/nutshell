@@ -5,10 +5,11 @@ import displayUserView from "./UserView"
 import displayNewsForm from "./displayNewForm"
 import addEvent from "./addEventForm"
 import displayEvent from "./displayEvent"
+import printEventToDOM from "./printEventToDom"
 import createChatRoom from "./messageForm"
 
 
-createChatRoom()
+// createChatRoom()
 
 
 import {createLandingPage, changePage} from "./createLandingPage"

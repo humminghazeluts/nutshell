@@ -79,7 +79,7 @@ const APIManager = {
     },
     // edit existing event
     editEvent: (eventId, eventObj) => {
-        return fetch(`http://localhost:8088/${eventId}`, {
+        return fetch(`http://localhost:8088/events/${eventId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -89,7 +89,7 @@ const APIManager = {
     },
     // delete event
     deleteEvent: (eventId) => {
-        return fetch(`http://localhost:8088/${eventId}`, {
+        return fetch(`http://localhost:8088/events/${eventId}`, {
             method: "DELETE",
         })
     },
