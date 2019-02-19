@@ -10,6 +10,7 @@ let editMessage = () => {
             APIManager.getindividualMessages(messageId).then(response => {
                 console.log(response)
                 document.getElementById("messageText").value = response.messages;
+                document.getElementById("messageId").value = response.id;
             })
         }
     })

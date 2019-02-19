@@ -19,43 +19,65 @@ const createChatRoom = () => {
     <h2>Hello ${userName} </h2>
     <label for="message">Enter New Message:</label>
     <textarea id="messageText" rows="4" cols="50" placeholder="Enter text here"></textarea>
-    <input type="hidden" id="contactId">
+    <input type="hidden" id="messageId">
     <button id="messageButton">Submit</button>
     </div>
     </section>
     `
-    const printMessageToDom = message => {  
+
+    
+    const printMessageToDom = message => {
         const messageEl = document.querySelector("#messageList")
-        
+
         messageEl.innerHTML += message
     }
-    
-   let putMessagesinDom = () => {
-    const messageEl = document.querySelector("#messageList")
-    messageEl.innerHTML = ""
-       APIManager.getMessages()
-    .then(messages => {
-        messages.forEach(message => {
-            const html = messageHTML.createMessageListHTML(message)
-            printMessageToDom(html)
-        })
-    
-    })
-}
-putMessagesinDom()
+
+
+    let putMessagesinDom = () => {
+        const messageEl = document.querySelector("#messageList")
+        messageEl.innerHTML = ""
+        APIManager.getMessages()
+            .then(messages => {
+                messages.forEach(message => {
+                    const html = messageHTML.createMessageListHTML(message)
+                    printMessageToDom(html)
+                })
+
+            })
+    }
+
+    putMessagesinDom()
+
+
     document.querySelector("#messageButton").addEventListener("click", () => {
+        let messagedId = document.getElementById("messageId").value
+
         const message = document.getElementById("messageText").value
         let userId = Number(sessionStorage.getItem("userId"))
-
         const newMessage = {
             messages: message,
             userId: userId
         }
+        if (messagedId === "") {
 
-        APIManager.postNewMessage(newMessage).then(()=> {
-            putMessagesinDom()
-        })
+            console.log("boop")
+
+            APIManager.postNewMessage(newMessage).then(() => {
+                putMessagesinDom()
+            })
+        } else {
+        
+            console.log("not empty")
+            APIManager.editMessage(messageId.value, newMessage).then(putMessagesinDom)
+        }
     })
+
+
 }
+// else {
+//     APIManager.editMessage(newMessage).then(putMessagesinDom)
+
+// }
+
 
 export default createChatRoom
