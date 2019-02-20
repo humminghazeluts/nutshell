@@ -1,6 +1,7 @@
 import addNewUser from "./registerNewUser"
 import APIManager from "./dataManager"
-import createLandingPage from "./createLandingPage"
+// import createLandingPage from "./createLandingPage"
+import {createLandingPage, changePage} from "./createLandingPage"
 let createRegistrationForm = (location) => {
     location = document.querySelector(".output")
     let contactFormHTML = `

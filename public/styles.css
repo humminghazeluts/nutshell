@@ -1,3 +1,7 @@
 .displays {
     border: 1px solid black
 }
+
+#messageList {
+    border: 1px solid black
+}
