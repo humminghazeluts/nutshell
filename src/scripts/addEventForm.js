@@ -48,7 +48,9 @@ const addEvent = () => {
         APIManager.editEvent(eventId, newEventObject).then(()=>{
             let printEvent = document.querySelector("#eventDisplay")
             printEvent.innerHTML = ""
-        }).then(seeEvents)
+        }).then(seeEvents).then(()=>{
+            document.querySelector("#addEvent").innerHTML = "Add Event"
+        })
             }
     }
     )
