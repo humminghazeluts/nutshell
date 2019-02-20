@@ -21,6 +21,7 @@ let editMessage = () => {
                 // console.log(response)
                 document.getElementById("messageText").value = response.messages;
                 document.getElementById("messageId").value = response.id;
+                document.querySelector("#messageButton").textContent = "Update Message"
                 } 
                 else {
                     alert("You can't edit another user's messages!")

@@ -22,7 +22,7 @@ const createChatRoom = () => {
     <label for="message">Enter New Message:</label>
     <textarea id="messageText" rows="4" cols="50" placeholder="Enter text here"></textarea>
     <input type="hidden" id="messageId">
-    <button id="messageButton"></button>
+    <button id="messageButton">Post Message</button>
     </div>
     </section>
     `
@@ -86,6 +86,9 @@ const createChatRoom = () => {
             console.log("not empty")
             APIManager.editMessage(messageId.value, newMessage).then(putMessagesinDom).then(() => {
                 document.getElementById("messageId").value = ""
+                
+            }).then(()=> {
+                document.querySelector("#messageButton").textContent = "Post Message"
             })
 
         }
