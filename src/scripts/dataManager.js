@@ -36,6 +36,10 @@ const APIManager = {
         return fetch("http://localhost:8088/articles")
             .then(res => res.json())
     },
+    getOneArticles: (id) => {
+        return fetch(`http://localhost:8088/articles/${id}`)
+            .then(res => res.json())
+    },
     // add new article
     postNewArticle: (newArticle) => {
         return fetch("http://localhost:8088/articles", {
@@ -47,13 +51,14 @@ const APIManager = {
         })
     },
     // edit existing user
-    editArticle: (articleId, articleObj) => {
-        return fetch(`http://localhost8088/articles/${articleId}`, {
+    editArticle: (articleId, newArticleObject) => {
+        console.log("editArticle")
+        return fetch(`http://localhost:8088/articles/${articleId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(articleObj)
+            body: JSON.stringify(newArticleObject)
         })
     },
     // delete article

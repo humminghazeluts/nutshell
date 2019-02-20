@@ -1,4 +1,5 @@
 import APIManager from "./dataManager"
+import displayNewsStories from "./displayNewStories";
 let postNewsStory = () => {
     
 
@@ -11,12 +12,13 @@ let postNewsStory = () => {
     let newStory = {}
     let synopsis = document.querySelector("#synopsis").value
     let URL = document.querySelector("#storyURL").value
+    
 
     newStory.url = URL
     newStory.synopsis = synopsis
     newStory.currentTimeStamp = dateTime
     newStory.userId = Number(sessionStorage.getItem("userId"))
-    APIManager.postNewArticle(newStory)
+    APIManager.postNewArticle(newStory).then(displayNewsStories)
     // let userPassword = document.querySelector("#userPassword").value
     // APIManager.postNewArticle().then((userArray) => {
     //     if (userName === "" || userEmail === "" || userPassword === "") {

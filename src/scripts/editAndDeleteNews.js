@@ -19,14 +19,16 @@ let changeNews = () => {
 
           .then(displayNewsStories);
       } else if (event.target.id.startsWith("editNewsButton--")) {
+        let articleId = event.target.id.split("--")[1];
+        APIManager.getOneArticles(articleId).then(article => {
+          document.querySelector("#addNewStory").textContent = "Update"
+          console.log("edit button clicked")
+          document.getElementById("synopsis").value = article.synopsis
+          document.getElementById("storyURL").value = article.url
+          document.getElementById("articleId").value = article.id
+          
+        })
 
-        console.log("edit button clicked")
-
-        let newsId = event.target.id.split("--")[1];
-
-        APIManager
-        .getArticles(newsId)
-        .then(displayNewsStories())
     }
   });
 };

@@ -1,9 +1,9 @@
 import APIManager from "./dataManager"
-import changeNews from "./editAndDeleteNews"
 
 let displayNewsStories = () => {
     let display = document.querySelector("#newsStoriesDisplay")
     let id = Number(sessionStorage.getItem("userId"))
+    display.innerHTML = "Stories go here"
     APIManager.getArticles(id).then((articles) => {
         // console.log(articles)
         // display.innerHTML = "News goes here"
