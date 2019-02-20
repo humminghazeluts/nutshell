@@ -33,12 +33,6 @@ const createLoginForm = () => {
 
         APIManager.getUsers()
             .then(users => {
-<<<<<<< HEAD
-                users.forEach(user => {
-                    if (user.username === username && user.password === password) {
-                        sessionStorage.setItem("userId", user.id)
-                        sessionStorage.setItem("userName", user.username)
-=======
                 let actualUser = false
                 for (let i = 0; i < users.length; i++) {
                     let user = users[i]
@@ -51,7 +45,6 @@ const createLoginForm = () => {
 
                         actualUser = true
                         sessionStorage.setItem("userId", Id)
->>>>>>> master
                         let currentUserHTML = userHTML(user)
                         printCurrentUser(currentUserHTML)
                         displayUserView()
