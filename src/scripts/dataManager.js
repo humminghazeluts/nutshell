@@ -17,7 +17,7 @@ const APIManager = {
     },
     // edit existing user
     editUser: (userId, userObj) => {
-        return fetch(`http://localhost:8088/${userId}`, {
+        return fetch(`http://localhost:8088/users/${userId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -27,13 +27,17 @@ const APIManager = {
     },
     // delete user
     deleteUser: (userId) => {
-        return fetch(`http://localhost:8088/${userId}`, {
+        return fetch(`http://localhost:8088/users/${userId}`, {
             method: "DELETE",
         })
     },
     // general see all articles function
     getArticles: () => {
         return fetch("http://localhost:8088/articles")
+            .then(res => res.json())
+    },
+    getOneArticles: (id) => {
+        return fetch(`http://localhost:8088/articles/${id}`)
             .then(res => res.json())
     },
     // add new article
@@ -47,24 +51,30 @@ const APIManager = {
         })
     },
     // edit existing user
-    editArticle: (articleId, articleObj) => {
-        return fetch(`http://localhost8088/${articleId}`, {
+    editArticle: (articleId, newArticleObject) => {
+        console.log("editArticle")
+        return fetch(`http://localhost:8088/articles/${articleId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(articleObj)
+            body: JSON.stringify(newArticleObject)
         })
     },
     // delete article
     deleteArticle: (articleId) => {
-        return fetch(`http://localhost:8088/${articleId}`, {
+        return fetch(`http://localhost:8088/articles/${articleId}`, {
             method: "DELETE",
         })
     },
     // general get all events function
     getEvents: () => {
-        return fetch("http://localhost:8088/events")
+        return fetch("http://localhost:8088/events?_sort=dateOfEvent&_order=asc")
+            .then(res => res.json())
+    },
+    // general get all events function
+    getSingleEvent: (eventId) => {
+        return fetch(`http://localhost:8088/events/${eventId}`)
             .then(res => res.json())
     },
     // add new event
@@ -79,7 +89,7 @@ const APIManager = {
     },
     // edit existing event
     editEvent: (eventId, eventObj) => {
-        return fetch(`http://localhost:8088/${eventId}`, {
+        return fetch(`http://localhost:8088/events/${eventId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -89,7 +99,7 @@ const APIManager = {
     },
     // delete event
     deleteEvent: (eventId) => {
-        return fetch(`http://localhost:8088/${eventId}`, {
+        return fetch(`http://localhost:8088/events/${eventId}`, {
             method: "DELETE",
         })
     },
@@ -97,6 +107,12 @@ const APIManager = {
     getTasks: () => {
         return fetch("http://localhost:8088/tasks")
             .then(res => res.json())
+    },
+
+     // Get single Task fucntion
+     getSingleTask: (taskId) => {
+        return fetch (`http://localhost:8088/tasks/${taskId}`)
+        .then (res => res.json())
     },
     // add new task
     postNewTask: (newTask) => {
@@ -110,7 +126,7 @@ const APIManager = {
     },
     // edit an existing task
     editTask: (taskId, taskObj) => {
-        return fetch(`http://localhost:8088/${taskId}`, {
+        return fetch(`http://localhost:8088/tasks/${taskId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -120,7 +136,7 @@ const APIManager = {
     },
     // delete task
     deleteTask: (taskId) => {
-        return fetch(`http://localhost:8088/${taskId}`, {
+        return fetch(`http://localhost:8088/tasks/${taskId}`, {
             method: "DELETE",
         })
     },

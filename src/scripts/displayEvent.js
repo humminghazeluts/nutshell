@@ -1,24 +1,35 @@
 import APIManager from "./dataManager"
+import seeEvents from "./printEventToDOM"
+
 
 // Event listener on the Add button to get values from the input fields
-    const displayEvent = () => {
-            let eventName = document.querySelector("#eventName").value
-            let eventDate = document.querySelector("#eventDate").value
-            let eventLocation = document.querySelector("#eventLocation").value
+const displayEvent = () => {
+    let outputEventEl = document.querySelector("#eventDisplay")
+    let nameOfEvent = document.querySelector("#eventName").value
+    let dateOfEvent = document.querySelector("#eventDate").value
+    let locationOfEvent = document.querySelector("#eventLocation").value
 
 
 
-            // Object saved from click event
-            const newEvent= {
-                userId: 1,
-                nameOfEvent: eventName,
-                dateOfEvent: eventDate,
-                locationOfEvent: eventLocation
-            }
-            APIManager.postNewEvent(newEvent)
+    // Object saved from click event
+    const newEvent = {
+        userId: parseInt(sessionStorage.getItem("userId")),
+        nameOfEvent: nameOfEvent,
+        dateOfEvent: dateOfEvent,
+        locationOfEvent: locationOfEvent
+    }
 
+    APIManager.postNewEvent(newEvent).then(() => {
+        outputEventEl.innerHTML = ""
+        seeEvents()
+    })
 
     }
+
+
+
+
+
 
 
 

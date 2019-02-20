@@ -1,12 +1,18 @@
+/*
+    Author: Abbey
+    Name: messageForm.js
+    Purpose: displays form, posts input to database, gets all messages from database, plus put and delete methods
+*/
 
 //new message should post in the chat area, prepended with the user's name
 //the most recent message should always be made visible at the bottom of the chat history
-//include scroll down?
 //there should be an affordance to edit logged in user's chat message and save
 import APIManager from "./dataManager"
 import messageHTML from "./message"
 import buttonText from "./messageButtonStatus"
 
+// import APIManager from "./dataManager"
+// import messageHTML from "./message"
 
 
 

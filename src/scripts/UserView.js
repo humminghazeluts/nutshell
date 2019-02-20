@@ -9,6 +9,10 @@ import createChatRoom from "./messageForm"
 import editMessage from "./editMessage"
 import addFriend from "./addFriend";
 import displayFriendsList from "./displayFriendList";
+import changeNews from "./editAndDeleteNews";
+
+import seeEvents from "./printEventToDom"
+import changeEvent from "./changeEvent"
 
 let displayUserView = () => {
     let output = document.querySelector(".output")
@@ -24,6 +28,8 @@ let displayUserView = () => {
     <div id="messageDisplay"></div>
     <div id="friendList"></div>`
     output.innerHTML = userViewHTML
+    seeEvents()
+    changeEvent()
     displayNewsForm()
     addEvent()
     addTask()
@@ -36,7 +42,9 @@ let displayUserView = () => {
     addFriend()
     displayFriendsList()
 
+    changeNews()
     
+
 }
 
 export default displayUserView
