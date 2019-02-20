@@ -5,6 +5,12 @@ import displayUserView from "./UserView"
 import displayNewsForm from "./displayNewForm"
 import addEvent from "./addEventForm"
 import displayEvent from "./displayEvent"
+import printEventToDOM from "./printEventToDom"
+import createChatRoom from "./messageForm"
+
+
+// createChatRoom()
+
 
 import {createLandingPage, changePage} from "./createLandingPage"
 import logOutButton from "./logout"
@@ -38,8 +44,8 @@ currentLoginVerification()
 
 // import createLoginForm from "./createLoginForm"
 
-// createLoginForm()
 
+// createRegistrationForm()
 
 // createLandingPage()
 // changePage.listenForEvent()
