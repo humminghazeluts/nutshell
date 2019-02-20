@@ -5,6 +5,10 @@ import logOutButton from "./logout"
 import sessionStorageDelete from "./sessionStorage"
 import displayNewsStories from "./displayNewStories"
 import printTasksToDom from "./taskPrintToDom"
+import createChatRoom from "./messageForm"
+import editMessage from "./editMessage"
+import addFriend from "./addFriend";
+import displayFriendsList from "./displayFriendList";
 import changeNews from "./editAndDeleteNews";
 
 import seeEvents from "./printEventToDom"
@@ -19,8 +23,10 @@ let displayUserView = () => {
     <div id="taskFormOutput"></div>
     <div id="logUserOut"></div>
     <div id="newsStoriesDisplay" class="displays">Stories go here</div>
-    <div id="taskDisplay" class="displays"></div>
-    <div id="eventDisplay" class="displays"></div>`
+    <div id="taskDisplay" class="displays">Tasks</div>
+    <div id="eventDisplay" class="displays">Events</div>
+    <div id="messageDisplay"></div>
+    <div id="friendList"></div>`
     output.innerHTML = userViewHTML
     seeEvents()
     changeEvent()
@@ -30,7 +36,12 @@ let displayUserView = () => {
     logOutButton()
     sessionStorageDelete()
     displayNewsStories()
+    createChatRoom()
     printTasksToDom()
+    editMessage()
+    addFriend()
+    displayFriendsList()
+
     changeNews()
     
 

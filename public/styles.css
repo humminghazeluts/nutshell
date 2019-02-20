@@ -7,3 +7,17 @@
     flex-direction: column
 }
 
+#messageList {
+    border: 1px solid black
+}
+
+.eventCard:first-of-type {
+    font-size: 2em;
+    font-weight: bold;
+    background: dodgerblue;
+
+}
+
+.eventCard {
+    background: white;
+}
