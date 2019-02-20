@@ -98,6 +98,12 @@ const APIManager = {
         return fetch("http://localhost:8088/tasks")
             .then(res => res.json())
     },
+
+     // Get single Task fucntion
+     getSingleTask: (taskId) => {
+        return fetch (`http://localhost:8088/tasks/${taskId}`)
+        .then (res => res.json())
+    },
     // add new task
     postNewTask: (newTask) => {
         return fetch("http://localhost:8088/tasks", {
@@ -110,7 +116,7 @@ const APIManager = {
     },
     // edit an existing task
     editTask: (taskId, taskObj) => {
-        return fetch(`http://localhost:8088/${taskId}`, {
+        return fetch(`http://localhost:8088/tasks/${taskId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -120,7 +126,7 @@ const APIManager = {
     },
     // delete task
     deleteTask: (taskId) => {
-        return fetch(`http://localhost:8088/${taskId}`, {
+        return fetch(`http://localhost:8088/tasks/${taskId}`, {
             method: "DELETE",
         })
     },
