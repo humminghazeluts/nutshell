@@ -79,7 +79,7 @@ const APIManager = {
     },
     // edit existing event
     editEvent: (eventId, eventObj) => {
-        return fetch(`http://localhost:8088/events/events/${eventId}`, {
+        return fetch(`http://localhost:8088/events?eventId=${eventId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
