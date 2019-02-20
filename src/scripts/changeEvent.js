@@ -4,10 +4,10 @@ import seeEvents from "./printEventToDOM";
 
 let changeEvent = () => {
     let eventOutputEl = document.querySelector("#eventDisplay")
-    eventOutputEl.innerHTML = ""
     eventOutputEl.addEventListener("click", () => {
         if (event.target.id.startsWith("deleteButton--")) {
             let editEventInfo = event.target.id.split("--")[1]
+            eventOutputEl.innerHTML = ""
             APIManager
                 .deleteEvent(editEventInfo)
                 .then(seeEvents)
