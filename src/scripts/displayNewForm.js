@@ -38,14 +38,15 @@ Add News Story!
         if (buttonText === "Update") {  
            let synopsis =  document.getElementById("synopsis").value 
            let url = document.getElementById("storyURL").value 
-            
+            let userId = sessionStorage.getItem("userId")
             //capture the values of the new fields and store it into a new object
             const newArticleObject = {
                 synopsis : synopsis, 
                 url: url,
                 currentTimeStamp: "12345",
-                userId: 2
+                userId: userId
             }
+            console.log(newArticleObject)
             console.log(newArticleObject)
             APIManager.editArticle(articledId, newArticleObject)
             .then(() => {
