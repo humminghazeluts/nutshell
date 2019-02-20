@@ -43,6 +43,8 @@ const addTask = () => {
                 const newTaskObject = createTask(taskName, taskDate, completed)
                 event.target.textContent = "Add Task!"
                 APIManager.editTask(Number(taskId), newTaskObject).then(()=>{
+                let printPlace = document.querySelector("#taskDisplay")
+                printPlace.innerHTML = ""
                 printTasksToDom()
 
                 })
