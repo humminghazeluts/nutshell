@@ -7,6 +7,8 @@ import displayNewsStories from "./displayNewStories"
 import printTasksToDom from "./taskPrintToDom"
 import changeNews from "./editAndDeleteNews";
 
+import seeEvents from "./printEventToDom"
+import changeEvent from "./changeEvent"
 
 let displayUserView = () => {
     let output = document.querySelector(".output")
@@ -20,6 +22,8 @@ let displayUserView = () => {
     <div id="taskDisplay" class="displays"></div>
     <div id="eventDisplay" class="displays"></div>`
     output.innerHTML = userViewHTML
+    seeEvents()
+    changeEvent()
     displayNewsForm()
     addEvent()
     addTask()
@@ -30,7 +34,6 @@ let displayUserView = () => {
     changeNews()
     
 
-    
 }
 
 export default displayUserView
