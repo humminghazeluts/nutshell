@@ -23,6 +23,7 @@ let changeNews = () => {
         APIManager.getOneArticles(articleId).then(article => {
           document.querySelector("#addNewStory").textContent = "Update"
           console.log("edit button clicked")
+          document.getElementById("newsTitle").value = article.newsTitle
           document.getElementById("synopsis").value = article.synopsis
           document.getElementById("storyURL").value = article.url
           document.getElementById("articleId").value = article.id

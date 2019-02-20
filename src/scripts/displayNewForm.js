@@ -14,15 +14,16 @@ let displayNewsForm = () => {
     // let newsFormDisplayBox = document.querySelector(".output")
     let newsFormHTML = `
     <div>
-    <fieldset>
+    <fieldset id="newsContainer">
     <input type="hidden" id="articleId">
+    <label for="newsTitle">News Title</label>
+    <input type="text" name="newsTitle" id="newsTitle">
         <label for="synopsis">Story Synposis</label>
         <textarea type="text" name="synopsis" id="synopsis"></textarea>
+        <label for="storyURL">Story URL</label>
+        <input type="text" name="storyURL" id="storyURL">
     </fieldset>
-<fieldset>
-    <label for="storyURL">Story URL</label>
-    <input type="text" name="storyURL" id="storyURL">
-</fieldset>
+
 
 <button id="addNewStory">
 Add News Story!
@@ -36,14 +37,21 @@ Add News Story!
         let buttonText = document.querySelector("#addNewStory").textContent
         console.log(articledId)
         if (buttonText === "Update") {  
+            let today = new Date()
+            let date = today.getFullYear()+ "-" +(today.getMonth()+1)+"-"+today.getDate()
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+            let dateTime = date+" " + time
+            
+           let newsTitle = document.getElementById("newsTitle").value
            let synopsis =  document.getElementById("synopsis").value 
            let url = document.getElementById("storyURL").value 
-            let userId = Number(sessionStorage.getItem("userId"))
-            //capture the values of the new fields and store it into a new object
+           let userId = Number(sessionStorage.getItem("userId"))
+        
             const newArticleObject = {
+                newsTitle : newsTitle,
                 synopsis : synopsis, 
                 url: url,
-                currentTimeStamp: "12345",
+                currentTimeStamp: dateTime,
                 userId: userId
             }
             console.log(newArticleObject)

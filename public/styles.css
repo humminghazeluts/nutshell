@@ -1,3 +1,9 @@
 .displays {
     border: 1px solid black
 }
+
+#newsContainer {
+    display: flex;
+    flex-direction: column
+}
+
