@@ -17,7 +17,7 @@ const APIManager = {
     },
     // edit existing user
     editUser: (userId, userObj) => {
-        return fetch(`http://localhost:8088/${userId}`, {
+        return fetch(`http://localhost:8088/users/${userId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -27,7 +27,7 @@ const APIManager = {
     },
     // delete user
     deleteUser: (userId) => {
-        return fetch(`http://localhost:8088/${userId}`, {
+        return fetch(`http://localhost:8088/users/${userId}`, {
             method: "DELETE",
         })
     },
@@ -64,7 +64,12 @@ const APIManager = {
     },
     // general get all events function
     getEvents: () => {
-        return fetch("http://localhost:8088/events")
+        return fetch("http://localhost:8088/events?_sort=dateOfEvent&_order=asc")
+            .then(res => res.json())
+    },
+    // general get all events function
+    getSingleEvent: (eventId) => {
+        return fetch(`http://localhost:8088/events/${eventId}`)
             .then(res => res.json())
     },
     // add new event
