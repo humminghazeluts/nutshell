@@ -33,16 +33,32 @@ const createLoginForm = () => {
 
         APIManager.getUsers()
             .then(users => {
-                users.forEach(user => {
-                    if (user.username === username && user.password === password) {
-                        sessionStorage.setItem("userId", user.id)
+                let actualUser = false
+                for (let i = 0; i < users.length; i++) {
+                    let user = users[i]
+                    let UserName = users[i].username;
+                    let PassWord = users[i].password;
+                    let Id = users[i].id
+                    console.log(UserName, PassWord)
+                    if (UserName === username && PassWord === password) {
+                        console.log(UserName, PassWord)
+
+                        actualUser = true
+                        sessionStorage.setItem("userId", Id)
                         let currentUserHTML = userHTML(user)
                         printCurrentUser(currentUserHTML)
                         displayUserView()
+
                     }
-                })
+                }
+                if (actualUser === false) {
+
+                    alert("nope")
+                }
+
             })
     })
 }
+
 
 export default createLoginForm  
