@@ -39,12 +39,14 @@ const createLoginForm = () => {
                     let UserName = users[i].username;
                     let PassWord = users[i].password;
                     let Id = users[i].id
+                    let userName = users[i].username
                     console.log(UserName, PassWord)
                     if (UserName === username && PassWord === password) {
                         console.log(UserName, PassWord)
 
                         actualUser = true
                         sessionStorage.setItem("userId", Id)
+                        sessionStorage.setItem("userName", userName)
                         let currentUserHTML = userHTML(user)
                         printCurrentUser(currentUserHTML)
                         displayUserView()
