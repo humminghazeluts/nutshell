@@ -14,7 +14,8 @@ let changeEvent = () => {
         } else if (event.target.id.startsWith("editButton--")) {
             let editEventId = event.target.id.split("--")[1]
 
-            APIManager.getEvents(editEventId).then(response => {
+            APIManager.getSingleEvent(editEventId).then(response => {
+                console.log(response)
                 document.querySelector("#hiddenEventId").value = response.id
                 document.querySelector("#eventName").value = response.nameOfEvent
                 document.querySelector("#eventDate").value = response.dateOfEvent

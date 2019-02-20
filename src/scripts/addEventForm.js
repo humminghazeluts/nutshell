@@ -33,14 +33,23 @@ const addEvent = () => {
             event.preventDefault()
             alert("New event added")
         } else if
-            (event.target.textContent === "Update Event")
+            (event.target.textContent === "Update Event") {
             let eventId = document.querySelector("#hiddenEventId").value
-        let eventName = document.querySelector("#nameOfEvent").value
-        let eventDate = document.querySelector("#dateOfEvent").value
-        let eventLocation = document.querySelector("#locationOfEvent").value
-        let newEventObject = displayEvent(eventName, eventDate, eventLocation)
-        APIManager.editEvent(eventId, newEventObject)
-        console.log(newEvent).then(seeEvents)
+            let userId = parseInt(sessionStorage.getItem("userId"))
+        let eventName = document.querySelector("#eventName").value
+        let eventDate = document.querySelector("#eventDate").value
+        let eventLocation = document.querySelector("#eventLocation").value
+        let newEventObject = {
+            userId: userId,
+            nameOfEvent: eventName,
+            dateOfEvent: eventDate,
+            locationOfEvent: eventLocation
+        }
+        APIManager.editEvent(eventId, newEventObject).then(()=>{
+            let printEvent = document.querySelector("#eventDisplay")
+            printEvent.innerHTML = ""
+        }).then(seeEvents)
+            }
     }
     )
 }

@@ -64,7 +64,12 @@ const APIManager = {
     },
     // general get all events function
     getEvents: () => {
-        return fetch("http://localhost:8088/events")
+        return fetch("http://localhost:8088/events?_sort=dateOfEvent&_order=asc")
+            .then(res => res.json())
+    },
+    // general get all events function
+    getSingleEvent: (eventId) => {
+        return fetch(`http://localhost:8088/events/${eventId}`)
             .then(res => res.json())
     },
     // add new event
@@ -79,7 +84,7 @@ const APIManager = {
     },
     // edit existing event
     editEvent: (eventId, eventObj) => {
-        return fetch(`http://localhost:8088/events?eventId=${eventId}`, {
+        return fetch(`http://localhost:8088/events/${eventId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

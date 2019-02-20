@@ -13,11 +13,12 @@ const displayEvent = () => {
 
     // Object saved from click event
     const newEvent = {
+        userId: parseInt(sessionStorage.getItem("userId")),
         nameOfEvent: nameOfEvent,
         dateOfEvent: dateOfEvent,
         locationOfEvent: locationOfEvent
     }
-    
+
     APIManager.postNewEvent(newEvent).then(() => {
         outputEventEl.innerHTML = ""
         seeEvents()
