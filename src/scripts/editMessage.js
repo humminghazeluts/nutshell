@@ -9,16 +9,16 @@ let editMessage = () => {
     messageDisplay.addEventListener("click", event => {
         // buttonText()
         
-        if (event.target.id.startsWith("--")) {
+        if (event.target.id.startsWith("edit--")) {
             console.log("edit clicked")
             
             let messageId = event.target.id.split("--")[1]
             console.log(messageId)
             APIManager.getindividualMessages(messageId).then(response => {
-                console.log(userId)
-                console.log(response.userId)
+                // console.log(userId)
+                // console.log(response.userId)
                 if (userId === response.userId) {
-                console.log(response)
+                // console.log(response)
                 document.getElementById("messageText").value = response.messages;
                 document.getElementById("messageId").value = response.id;
                 } 

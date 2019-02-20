@@ -12,10 +12,11 @@ const messageHTML = {
 
         return `
 
-        <section id="message--${newMessage.id}"> 
+        <section> 
             
-            <div id="--${newMessage.user.id}"><strong>${newMessage.user.username}:</strong> ${newMessage.messages}</div>
-            <button id="--${newMessage.id}">Edit Message</button>
+            <div><strong id="--friend${newMessage.user.id}">${newMessage.user.username}:</strong></div>
+            <div>${newMessage.messages}</div>
+            <button id="edit--${newMessage.id}">Edit Message</button>
             
         </section>
         

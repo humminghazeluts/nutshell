@@ -42,7 +42,7 @@ const createChatRoom = () => {
             .then(messages => {
                 for (let i = 0; i < messages.length; i++) {
                     let message = messages[i];
-                    console.log(messages.length)
+                    // console.log(messages.length)
                     if (message.id >= (messages.length-4)) {
                         const html = messageHTML.createMessageListHTML(message)
                         printMessageToDom(html)

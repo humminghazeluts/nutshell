@@ -7,6 +7,7 @@ import displayNewsStories from "./displayNewStories"
 import printTasksToDom from "./taskPrintToDom"
 import createChatRoom from "./messageForm"
 import editMessage from "./editMessage"
+import addFriend from "./addFriend";
 
 let displayUserView = () => {
     let output = document.querySelector(".output")
@@ -30,6 +31,7 @@ let displayUserView = () => {
     createChatRoom()
     printTasksToDom()
     editMessage()
+    addFriend()
 
     
 }
