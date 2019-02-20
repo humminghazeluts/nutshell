@@ -8,6 +8,7 @@ import printTasksToDom from "./taskPrintToDom"
 import createChatRoom from "./messageForm"
 import editMessage from "./editMessage"
 import addFriend from "./addFriend";
+import displayFriendsList from "./displayFriendList";
 
 let displayUserView = () => {
     let output = document.querySelector(".output")
@@ -20,7 +21,8 @@ let displayUserView = () => {
     <div id="newsStoriesDisplay" class="displays">Stories go here</div>
     <div id="taskDisplay" class="displays">Tasks</div>
     <div id="eventDisplay" class="displays">Events</div>
-    <div id="messageDisplay"></div>`
+    <div id="messageDisplay"></div>
+    <div id="friendList"></div>`
     output.innerHTML = userViewHTML
     displayNewsForm()
     addEvent()
@@ -32,6 +34,7 @@ let displayUserView = () => {
     printTasksToDom()
     editMessage()
     addFriend()
+    displayFriendsList()
 
     
 }
