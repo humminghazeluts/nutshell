@@ -38,7 +38,7 @@ Add News Story!
         if (buttonText === "Update") {  
            let synopsis =  document.getElementById("synopsis").value 
            let url = document.getElementById("storyURL").value 
-            let userId = sessionStorage.getItem("userId")
+            let userId = Number(sessionStorage.getItem("userId"))
             //capture the values of the new fields and store it into a new object
             const newArticleObject = {
                 synopsis : synopsis, 
