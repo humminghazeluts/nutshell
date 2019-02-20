@@ -1,6 +1,7 @@
 import APIManager from "./dataManager"
 import seeEvents from "./printEventToDOM"
 
+
 // Event listener on the Add button to get values from the input fields
     const displayEvent = () => {
         let outputEventEl = document.querySelector("#eventDisplay")
@@ -17,6 +18,7 @@ import seeEvents from "./printEventToDOM"
                 dateOfEvent: dateOfEvent,
                 locationOfEvent: locationOfEvent
             }
+
             APIManager.postNewEvent(newEvent).then(() => {
                 outputEventEl.innerHTML = ""
                 seeEvents()

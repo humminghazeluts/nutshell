@@ -1,23 +1,24 @@
 
 import APIManager from "./dataManager";
 import seeEvents from "./printEventToDOM";
+import displayEvent from "./displayEvent";
 
 let changeEvent = () => {
     let eventOutputEl = document.querySelector("#eventDisplay")
     eventOutputEl.addEventListener("click", () => {
-        eventOutputEl.innerHTML = ""
         if (event.target.id.startsWith("deleteButton--")) {
-            let editEventInfo = event.target.id.split("--")[1]
+            eventOutputEl.innerHTML = ""
+            let nukeEvent = event.target.id.split("--")[1]
             APIManager
-            .deleteEvent(editEventInfo)
+            .deleteEvent(nukeEvent)
             .then(seeEvents)
         } else if (event.target.id.startsWith("editButton--")) {
             let editEventInfo = event.target.id.split("--")[1]
 
-            APIManager.getTasks(editEventInfo).then(response => {
-                document.querySelector("#eventName").value = response.nameOfEvent
-                document.querySelector("#eventDate").value = response.dateOfEvent
-                document.querySelector("#eventLocation").value = response.locationOfEvent
+            APIManager.getEvents(editEventInfo).then(response => {
+                document.querySelector("#eventName").value = response[0].nameOfEvent
+                document.querySelector("#eventDate").value = response[0].dateOfEvent
+                document.querySelector("#eventLocation").value = response[0].locationOfEvent
             })
         }
     })

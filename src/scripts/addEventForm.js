@@ -1,5 +1,6 @@
 import displayEvent from "./displayEvent";
 
+
 const addEvent = () => {
 document.querySelector("#eventFormOutput").innerHTML =
  `
