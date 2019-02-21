@@ -1,4 +1,5 @@
 import APIManager from "./dataManager"
+import displayFriendsList from "./displayFriendList";
 
 let searchForFriendDisplay = () => {
     let userId = Number(sessionStorage.getItem("userId"))
@@ -56,6 +57,7 @@ let searchForFriendDisplay = () => {
                         if (answer === "Yes") {
                             APIManager.postNewFriendShip(newFriendship).then(() => {
                                 alert("Your friend was added.")
+                                displayFriendsList()
                             }).then(() => {
                                 document.querySelector("#findAFriend").innerHTML = ""
                             })

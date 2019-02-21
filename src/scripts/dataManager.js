@@ -5,6 +5,10 @@ const APIManager = {
         return fetch("http://localhost:8088/users")
             .then(res => res.json())
     },
+    getSpecificUser: (id) => {
+        return fetch(`http://localhost:8088/users/${id}`)
+            .then(res => res.json())
+    },
     // add new user to the API
     postNewUser: (newUser) => {
         return fetch("http://localhost:8088/users", {

@@ -28,7 +28,9 @@ let displayUserView = () => {
     <div id="eventDisplay" class="displays">Events</div>
     <div id="messageDisplay"></div>
     <div id="searchForFriend"></div>
-    <div id="friendList"></div>`
+    <h1>Your friends list</h1>
+    <div id="friendList">
+    </div>`
     output.innerHTML = userViewHTML
     seeEvents()
     changeEvent()
