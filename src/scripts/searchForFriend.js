@@ -35,6 +35,12 @@ let searchForFriendDisplay = () => {
                 }
                 let previousMatch = false
                 let alreadyLoggedIn = false
+                let tryingToAddSelf = false
+                 if (userId === newFriendId) {
+                    alert("You can't add yourself!")
+                    tryingToAddSelf === true
+                    return
+                }
                 APIManager.getfriendShip().then(friendships => {
                     console.log(friendships)
                     for (let i = 0; i < friendships.length; i++) {
@@ -44,15 +50,19 @@ let searchForFriendDisplay = () => {
                             alert("Friendship already exists!")
                             previousMatch = true
                             return
-                        } else {
+                        } 
+       
+                        else {
                             previousMatch = false
+                            tryingToAddSelf === false
+
                         }
                         console.log(previousMatch)
 
                     }
                 }).then(() => {
 
-                    if (friendFound === true && previousMatch === false) {
+                    if (friendFound === true && previousMatch === false && tryingToAddSelf === false)  {
                         let answer = prompt("You friend is here! Would you like to add them as a friend? Yes or No")
                         if (answer === "Yes") {
                             APIManager.postNewFriendShip(newFriendship).then(() => {
@@ -63,9 +73,9 @@ let searchForFriendDisplay = () => {
                             })
                             console.log(newFriendship)
                             return
-                        }
+                        } 
                         return
-                    } else if (friendFound === true && previousMatch === true) {
+                    } else if ((friendFound === true && previousMatch === true) || (friendFound === true && tryingToAddSelf === true)) {
                             return
                     }
                     else {
