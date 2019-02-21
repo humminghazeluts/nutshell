@@ -16,8 +16,8 @@ let displayNewsStories = () => {
                 <h3>${article.newsTitle}</h3>
                 <p>${article.synopsis}</p>
                 <p>${article.url}</p> 
-                <button id="deleteNewsButton--${article.id}">Delete ${article.synopsis}</button>
-                <button id="editNewsButton--${article.id}">Edit ${article.synopsis}</button>
+                <button id="deleteNewsButton--${article.id}">Delete ${article.newsTitle}</button>
+                <button id="editNewsButton--${article.id}">Edit ${article.newsTitle}</button>
                 </section>
                 `
 
