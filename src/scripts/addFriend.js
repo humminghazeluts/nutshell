@@ -40,7 +40,8 @@ let addFriend = () => {
                     } else {
                         alreadyLoggedIn = false
                     }
-                } if (previousMatch === false && alreadyLoggedIn === false) {
+                } 
+                if (previousMatch === false && alreadyLoggedIn === false) {
                     let answer = prompt("Are you sure you want to add this person as a friend?, Yes or No")
                     if (answer === "Yes") {
                     APIManager.postNewFriendShip(newFriendship).then(() => {
