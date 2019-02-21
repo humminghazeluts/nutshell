@@ -18,7 +18,7 @@ import searchForFriendDisplay from "./searchForFriend";
 let displayUserView = () => {
     let output = document.querySelector(".output")
     let userViewHTML = `
-    <h1>Hi user!</h1>
+    <h1>Hi ${sessionStorage.getItem("userName")}!</h1>
     <div id="eventFormOutput"></div>
     <div id="newsFormOutput"></div>
     <div id="taskFormOutput"></div>
