@@ -7,7 +7,7 @@ let displayFriendsList = () => {
     }).then(users => {
         users.forEach(user => {
             if (user.id !== id) {
-                console.log(user)
+                // console.log(user)
             }
         });
     })
