@@ -10,10 +10,11 @@ let postNewsStory = () => {
     console.log(dateTime)
 
     let newStory = {}
+    let newsTitle = document.querySelector("#newsTitle").value
     let synopsis = document.querySelector("#synopsis").value
     let URL = document.querySelector("#storyURL").value
     
-
+    newStory.newsTitle = newsTitle
     newStory.url = URL
     newStory.synopsis = synopsis
     newStory.currentTimeStamp = dateTime
