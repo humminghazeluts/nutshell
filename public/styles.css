@@ -15,6 +15,11 @@ fieldset {
     margin: 5px
 }
 
+#newsContainer {
+    display: flex;
+    flex-direction: column
+}
+
 #messageList {
     border: 1px solid black
 }
@@ -29,4 +34,3 @@ fieldset {
 .eventCard {
     background: white;
 }
-
