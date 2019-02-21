@@ -1,5 +1,6 @@
 import APIManager from "./dataManager"
 import buttonText from "./messageButtonStatus"
+import displayFriendsList from "./displayFriendList";
 
 let addFriend = () => {
     // let messageDisplay = document.querySelector("#messageList")
@@ -13,13 +14,13 @@ let addFriend = () => {
             console.log("add clicked")
 
             let newFriendId = Number(event.target.id.split("--friend")[1])
-            console.log(newFriendId)
+            // console.log(newFriendId)
             let newFriendship = {
                 "friend_1Id": userId,
                 "friend_2Id": newFriendId
             }
             APIManager.getfriendShip().then(friendships => {
-                console.log(friendships)
+                // console.log(friendships)
                 let previousMatch = false
                 let alreadyLoggedIn = false
                 for (let i = 0; i < friendships.length; i++) {
@@ -46,6 +47,7 @@ let addFriend = () => {
                     if (answer === "Yes") {
                     APIManager.postNewFriendShip(newFriendship).then(() => {
                         alert("new friend added")
+                        displayFriendsList()
                         
                         // return
                     })
