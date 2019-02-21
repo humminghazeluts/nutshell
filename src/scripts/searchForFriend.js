@@ -63,7 +63,10 @@ let searchForFriendDisplay = () => {
                             return
                         }
                         return
-                    } else {
+                    } else if (friendFound === true && previousMatch === true) {
+                            return
+                    }
+                    else {
                         alert("You friend is not a member of Nutshell")
                         return
                     }
