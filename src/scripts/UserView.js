@@ -13,11 +13,12 @@ import changeNews from "./editAndDeleteNews";
 
 import seeEvents from "./printEventToDom"
 import changeEvent from "./changeEvent"
+import searchForFriendDisplay from "./searchForFriend";
 
 let displayUserView = () => {
     let output = document.querySelector(".output")
     let userViewHTML = `
-    <h1>Hi user!</h1>
+    <h1>Hi ${sessionStorage.getItem("userName")}!</h1>
     <div id="eventFormOutput"></div>
     <div id="newsFormOutput"></div>
     <div id="taskFormOutput"></div>
@@ -26,6 +27,7 @@ let displayUserView = () => {
     <div id="taskDisplay" class="displays">Tasks</div>
     <div id="eventDisplay" class="displays">Events</div>
     <div id="messageDisplay"></div>
+    <div id="searchForFriend"></div>
     <div id="friendList"></div>`
     output.innerHTML = userViewHTML
     seeEvents()
@@ -41,7 +43,7 @@ let displayUserView = () => {
     editMessage()
     addFriend()
     displayFriendsList()
-
+    searchForFriendDisplay()
     changeNews()
     
 
