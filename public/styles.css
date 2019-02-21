@@ -1,5 +1,18 @@
+body {
+    font-family: 'Acme', sans-serif;
+    background: rgb(215, 232, 238)
+}
+
+fieldset {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px
+}
+
 .displays {
-    border: 1px solid black
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px
 }
 
 #messageList {
@@ -16,3 +29,4 @@
 .eventCard {
     background: white;
 }
+
